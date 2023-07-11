@@ -10,11 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5834717411141585588}
   - component: {fileID: 5872187736540463786}
-  - component: {fileID: 5872454319756532572}
-  - component: {fileID: 5871697817268239994}
-  - component: {fileID: 5871571608618632388}
   - component: {fileID: 8275503908375471262}
-  - component: {fileID: -488419156370023782}
   m_Layer: 10
   m_Name: SwordFast
   m_TagString: Untagged
@@ -127,204 +123,6 @@ MonoBehaviour:
   KnockbackForce: {x: 30, y: 0, z: 0}
   InvincibilityDuration: 0.5
   CanDamageOwner: 0
---- !u!114 &5872454319756532572
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5832070666183797444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a557e2b93323f4831a62221b200348c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WeaponName: Sword
-  WeaponCurrentlyActive: 1
-  InputAuthorized: 1
-  TriggerMode: 0
-  DelayBeforeUse: 0
-  DelayBeforeUseReleaseInterruption: 0
-  TimeBetweenUses: 0.5
-  TimeBetweenUsesReleaseInterruption: 0
-  UseBurstMode: 0
-  BurstLength: 3
-  BurstTimeBetweenShots: 0.1
-  MagazineBased: 0
-  MagazineSize: 30
-  AutoReload: 0
-  NoInputReload: 0
-  ReloadTime: 2
-  AmmoConsumedPerShot: 1
-  AutoDestroyWhenEmpty: 0
-  AutoDestroyWhenEmptyDelay: 1
-  CurrentAmmoLoaded: 30
-  WeaponAttachmentOffset: {x: 0, y: 0.31, z: 0}
-  FlipWeaponOnCharacterFlip: 0
-  RightFacingFlipValue: {x: 1, y: 1, z: 1}
-  LeftFacingFlipValue: {x: -1, y: 1, z: 1}
-  WeaponUseTransform: {fileID: 0}
-  WeaponShouldFlip: 1
-  LeftHandHandle: {fileID: 0}
-  RightHandHandle: {fileID: 0}
-  ModifyMovementWhileAttacking: 0
-  MovementMultiplier: 0
-  PreventAllMovementWhileInUse: 1
-  PreventAllAimWhileInUse: 1
-  RecoilForce: 0
-  Animators: []
-  PerformAnimatorSanityChecks: 0
-  MirrorCharacterAnimatorParameters: 0
-  WeaponAnimationID: 10
-  IdleAnimationParameter: 
-  StartAnimationParameter: Slash2Fast
-  DelayBeforeUseAnimationParameter: 
-  SingleUseAnimationParameter: 
-  UseAnimationParameter: 
-  DelayBetweenUsesAnimationParameter: 
-  StopAnimationParameter: 
-  ReloadStartAnimationParameter: 
-  ReloadAnimationParameter: 
-  ReloadStopAnimationParameter: 
-  WeaponAngleAnimationParameter: 
-  WeaponAngleRelativeAnimationParameter: 
-  EquippedAnimationParameter: 
-  WeaponStartMMFeedback: {fileID: 0}
-  WeaponUsedMMFeedback: {fileID: 0}
-  WeaponUsedMMFeedbackAlt: {fileID: 0}
-  WeaponStopMMFeedback: {fileID: 0}
-  WeaponReloadMMFeedback: {fileID: 0}
-  WeaponReloadNeededMMFeedback: {fileID: 0}
-  InitializeOnStart: 0
-  Interruptable: 0
-  Flipped: 0
-  MeleeDamageAreaMode: 0
-  DamageAreaShape: 2
-  AreaOffset: {x: 0, y: 0.2, z: 0}
-  AreaSize: {x: 3, y: 3, z: 4}
-  TriggerFilter: 195
-  HitDamageableFeedback: {fileID: 0}
-  HitNonDamageableFeedback: {fileID: 0}
-  ExistingDamageArea: {fileID: 0}
-  InitialDelay: 0.16
-  ActiveDuration: 0.066
-  TargetLayerMask:
-    serializedVersion: 2
-    m_Bits: 8448
-  MinDamageCaused: 2
-  MaxDamageCaused: 2
-  Knockback: 1
-  KnockbackForce: {x: 30, y: 0, z: 0}
-  InvincibilityDuration: 0.5
-  CanDamageOwner: 0
---- !u!114 &5871697817268239994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5832070666183797444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a557e2b93323f4831a62221b200348c4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  WeaponName: Sword
-  WeaponCurrentlyActive: 1
-  InputAuthorized: 1
-  TriggerMode: 0
-  DelayBeforeUse: 0
-  DelayBeforeUseReleaseInterruption: 0
-  TimeBetweenUses: 0.8
-  TimeBetweenUsesReleaseInterruption: 0
-  UseBurstMode: 0
-  BurstLength: 3
-  BurstTimeBetweenShots: 0.1
-  MagazineBased: 0
-  MagazineSize: 30
-  AutoReload: 0
-  NoInputReload: 0
-  ReloadTime: 2
-  AmmoConsumedPerShot: 1
-  AutoDestroyWhenEmpty: 0
-  AutoDestroyWhenEmptyDelay: 1
-  CurrentAmmoLoaded: 30
-  WeaponAttachmentOffset: {x: 0, y: 0.31, z: 0}
-  FlipWeaponOnCharacterFlip: 0
-  RightFacingFlipValue: {x: 1, y: 1, z: 1}
-  LeftFacingFlipValue: {x: -1, y: 1, z: 1}
-  WeaponUseTransform: {fileID: 0}
-  WeaponShouldFlip: 1
-  LeftHandHandle: {fileID: 0}
-  RightHandHandle: {fileID: 0}
-  ModifyMovementWhileAttacking: 0
-  MovementMultiplier: 0
-  PreventAllMovementWhileInUse: 1
-  PreventAllAimWhileInUse: 1
-  RecoilForce: 0
-  Animators: []
-  PerformAnimatorSanityChecks: 0
-  MirrorCharacterAnimatorParameters: 0
-  WeaponAnimationID: 10
-  IdleAnimationParameter: 
-  StartAnimationParameter: Slash3Fast
-  DelayBeforeUseAnimationParameter: 
-  SingleUseAnimationParameter: 
-  UseAnimationParameter: 
-  DelayBetweenUsesAnimationParameter: 
-  StopAnimationParameter: 
-  ReloadStartAnimationParameter: 
-  ReloadAnimationParameter: 
-  ReloadStopAnimationParameter: 
-  WeaponAngleAnimationParameter: 
-  WeaponAngleRelativeAnimationParameter: 
-  EquippedAnimationParameter: 
-  WeaponStartMMFeedback: {fileID: 0}
-  WeaponUsedMMFeedback: {fileID: 0}
-  WeaponUsedMMFeedbackAlt: {fileID: 0}
-  WeaponStopMMFeedback: {fileID: 0}
-  WeaponReloadMMFeedback: {fileID: 0}
-  WeaponReloadNeededMMFeedback: {fileID: 0}
-  InitializeOnStart: 0
-  Interruptable: 0
-  Flipped: 0
-  MeleeDamageAreaMode: 0
-  DamageAreaShape: 2
-  AreaOffset: {x: 0, y: 0.5, z: 0}
-  AreaSize: {x: 4, y: 3, z: 4}
-  TriggerFilter: 195
-  HitDamageableFeedback: {fileID: 0}
-  HitNonDamageableFeedback: {fileID: 0}
-  ExistingDamageArea: {fileID: 0}
-  InitialDelay: 0.3
-  ActiveDuration: 0.15
-  TargetLayerMask:
-    serializedVersion: 2
-    m_Bits: 8448
-  MinDamageCaused: 10
-  MaxDamageCaused: 10
-  Knockback: 1
-  KnockbackForce: {x: 100, y: 0, z: 0}
-  InvincibilityDuration: 0.5
-  CanDamageOwner: 0
---- !u!114 &5871571608618632388
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5832070666183797444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72343fc0e13ec114196ab09ea808900e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DroppableCombo: 1
-  DropComboDelay: 1
-  ComboInProgressAnimationParameter: ComboInProgress
-  Weapons: []
-  OwnerCharacterHandleWeapon: {fileID: 0}
-  TimeSinceLastWeaponStopped: 0
 --- !u!114 &8275503908375471262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,13 +135,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0514d297deadac74fb15a7b7326ff0d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AimControl: 1
+  AimControl: 3
   RotationMode: 0
   WeaponRotationSpeed: 0
   MinimumAngle: -180
   MaximumAngle: 180
   MinimumMagnitude: 0.2
-  ReticleType: 0
+  ReticleType: 2
   Reticle: {fileID: 1373789777524232, guid: 65207112181da7b41bee2bb13af8b883, type: 3}
   ReticleDistance: 0
   ReticleHeight: 0
@@ -363,41 +161,3 @@ MonoBehaviour:
     m_Bits: 9
   MaximumSlopeElevation: 50
   AvoidNullAim: 1
---- !u!114 &-488419156370023782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5832070666183797444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 917bba013df402b42b7581f687f6c802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TargetsMask:
-    serializedVersion: 2
-    m_Bits: 8192
-  ObstacleMask:
-    serializedVersion: 2
-    m_Bits: 256
-  ScanRadius: 15
-  LineOfFireBoxcastSize: {x: 0.1, y: 0.1}
-  DurationBetweenScans: 1
-  DetectionOriginOffset: {x: 0, y: 0, z: 0}
-  OnlyAcquireTargetsIfOwnerIsIdle: 0
-  RotationMode: 0
-  ApplyAutoAimAsLastDirection: 1
-  MoveCameraTarget: 1
-  CameraTargetDistance: 0.5
-  CameraTargetMaxDistance: 10
-  CameraTargetSpeed: 5
-  AimMarkerPrefab: {fileID: 5368971261599636427, guid: d39c5f6ebe143724f829ae8356cba72c,
-    type: 3}
-  DestroyAimMarkerOnWeaponDestroy: 1
-  FirstTargetFoundFeedback: {fileID: 0}
-  NewTargetFoundFeedback: {fileID: 0}
-  NoMoreTargetsFeedback: {fileID: 0}
-  Target: {fileID: 0}
-  DrawDebugRadius: 1
-  OverlapMaximum: 10
