@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MechLoaderScene.unity
-    guid: 60b9f0e5a339f433c8fc85aafc9a5310
-  - enabled: 1
     path: Assets/Scenes/MechScene.unity
     guid: 9c182645b67f643dba62899a339fec97
+  - enabled: 1
+    path: Assets/Scenes/MechLoaderScene.unity
+    guid: 60b9f0e5a339f433c8fc85aafc9a5310
   m_configObjects: {}
