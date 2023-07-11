@@ -645,7 +645,7 @@ MonoBehaviour:
   AxisPressed:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 256746541292351977}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: SetVerticalMovement
         m_Mode: 0
@@ -672,7 +672,7 @@ GameObject:
   - component: {fileID: 166338311135487293}
   - component: {fileID: 269128277119856395}
   - component: {fileID: 261089578680460583}
-  - component: {fileID: 256746541292351977}
+  - component: {fileID: 2042326582269195435}
   m_Layer: 0
   m_Name: UICamera
   m_TagString: Untagged
@@ -775,7 +775,7 @@ MonoBehaviour:
   Joystick: {fileID: 82830521292999899}
   PointsText: {fileID: 0}
   PointsTextPattern: 000000
---- !u!114 &256746541292351977
+--- !u!114 &2042326582269195435
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -784,7 +784,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 144543713772167609}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 281595ba54132634bbe48b336e62e2c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 511c7b63705f44015afc84e19f77dd9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   InputDetectionActive: 1
@@ -799,6 +799,7 @@ MonoBehaviour:
   SmoothMovement: 1
   Threshold: {x: 0.1, y: 0.4}
   RotateInputBasedOnCameraDirection: 0
+  MaximumNumberOfWeapons: 2
 --- !u!1 &144550282951246741
 GameObject:
   m_ObjectHideFlags: 0
@@ -905,7 +906,7 @@ MonoBehaviour:
   ButtonPressedFirstTime:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 256746541292351977}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: SwitchWeaponButtonDown
         m_Mode: 1
@@ -920,7 +921,7 @@ MonoBehaviour:
   ButtonReleased:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 256746541292351977}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: SwitchWeaponButtonUp
         m_Mode: 1
@@ -935,7 +936,7 @@ MonoBehaviour:
   ButtonPressed:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 256746541292351977}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: SwitchWeaponButtonPressed
         m_Mode: 1
@@ -1073,7 +1074,7 @@ MonoBehaviour:
   ButtonPressedFirstTime:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 256746541292351977}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: DashButtonDown
         m_Mode: 1
@@ -1088,7 +1089,7 @@ MonoBehaviour:
   ButtonReleased:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 256746541292351977}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: DashButtonUp
         m_Mode: 1
@@ -1103,7 +1104,7 @@ MonoBehaviour:
   ButtonPressed:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 256746541292351977}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: DashButtonPressed
         m_Mode: 1
@@ -1330,7 +1331,7 @@ MonoBehaviour:
   ButtonPressedFirstTime:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 256746541292351977}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: JumpButtonDown
         m_Mode: 1
@@ -1342,7 +1343,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 256746541292351977}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: InteractButtonDown
         m_Mode: 1
@@ -1357,7 +1358,7 @@ MonoBehaviour:
   ButtonReleased:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 256746541292351977}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: JumpButtonUp
         m_Mode: 1
@@ -1369,7 +1370,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 256746541292351977}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: InteractButtonUp
         m_Mode: 1
@@ -1384,7 +1385,7 @@ MonoBehaviour:
   ButtonPressed:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 256746541292351977}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: JumpButtonPressed
         m_Mode: 1
@@ -1522,7 +1523,7 @@ MonoBehaviour:
   ButtonPressedFirstTime:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 256746541292351977}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: ShootButtonDown
         m_Mode: 1
@@ -1537,7 +1538,7 @@ MonoBehaviour:
   ButtonReleased:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 256746541292351977}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: ShootButtonUp
         m_Mode: 1
@@ -1552,7 +1553,7 @@ MonoBehaviour:
   ButtonPressed:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 256746541292351977}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: ShootButtonPressed
         m_Mode: 1
@@ -1719,7 +1720,7 @@ MonoBehaviour:
   AxisPressed:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 256746541292351977}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: SetHorizontalMovement
         m_Mode: 0
@@ -1983,7 +1984,7 @@ MonoBehaviour:
   AxisPressed:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 256746541292351977}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: SetHorizontalMovement
         m_Mode: 0
@@ -2734,7 +2735,7 @@ MonoBehaviour:
   AxisPressed:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 256746541292351977}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: SetVerticalMovement
         m_Mode: 0
@@ -3034,7 +3035,7 @@ MonoBehaviour:
   ButtonPressedFirstTime:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 256746541292351977}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: RunButtonDown
         m_Mode: 1
@@ -3049,7 +3050,7 @@ MonoBehaviour:
   ButtonReleased:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 256746541292351977}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: RunButtonUp
         m_Mode: 1
@@ -3064,7 +3065,7 @@ MonoBehaviour:
   ButtonPressed:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 256746541292351977}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: RunButtonPressed
         m_Mode: 1
@@ -3270,7 +3271,7 @@ MonoBehaviour:
   JoystickValue:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 256746541292351977}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: 
         m_MethodName: SetMovement
         m_Mode: 0
@@ -4692,7 +4693,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &79363010801522385
 RectTransform:
   m_ObjectHideFlags: 0
