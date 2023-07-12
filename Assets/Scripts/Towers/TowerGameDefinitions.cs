@@ -1,7 +1,7 @@
 using Towers;
 using UnityEngine;
 
-public class TowerManager : MonoBehaviour
+public class TowerGameDefinitions : MonoBehaviour
 {
     public enum TowerGroupColour
     {
