@@ -10,7 +10,12 @@ public class TimedText : MonoBehaviour
     private TextMeshProUGUI m_text;
 
     private Coroutine m_coroutine;
-    
+
+    private void Start()
+    {
+        ClearText();
+    }
+
     public void SetText(string text)
     {
         SetText(text, m_defaultDisplayTime);
