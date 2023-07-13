@@ -24,20 +24,25 @@ public class TowerPlacementController : MonoBehaviour
     {
         if (Input.GetKeyDown(m_placeKey))
         {
-            Tower tower = new Tower(m_stats);
-            tower.Position.Value = m_playerTransform.position;
+            
+        }
+    }
 
-            TowerGroup group = m_towerManager.GetGroup(m_groupColour);
+    private void PlaceTower()
+    {
+        Tower tower = new Tower(m_stats);
+        tower.Position.Value = m_playerTransform.position;
 
-            Result result = TowerGroupWalletWrapper.TryPlaceTower(group, m_wallet, tower);
+        TowerGroup group = m_towerManager.GetGroup(m_groupColour);
 
-            Debug.Log(result);
+        Result result = TowerGroupWalletWrapper.TryPlaceTower(group, m_wallet, tower);
 
-            if (result.Success)
-            {
-                TowerVisuals towerVisuals = Instantiate(m_towerVisualsPrefab, transform);
-                towerVisuals.SetUp(tower);
-            }
+        Debug.Log(result);
+
+        if (result.Success)
+        {
+            TowerVisuals towerVisuals = Instantiate(m_towerVisualsPrefab, transform);
+            towerVisuals.SetUp(tower);
         }
     }
 

@@ -2374,6 +2374,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1798292459}
     m_Modifications:
+    - target: {fileID: 999092038687204742, guid: aa1587ed9ff9f3544ba5188a786b4c03,
+        type: 3}
+      propertyPath: m_towerGameDefinitions
+      value: 
+      objectReference: {fileID: 1688067675}
+    - target: {fileID: 1234925765968151729, guid: aa1587ed9ff9f3544ba5188a786b4c03,
+        type: 3}
+      propertyPath: m_towerGameDefinitions
+      value: 
+      objectReference: {fileID: 1688067675}
+    - target: {fileID: 1294334955462463058, guid: aa1587ed9ff9f3544ba5188a786b4c03,
+        type: 3}
+      propertyPath: m_towerGameDefinitions
+      value: 
+      objectReference: {fileID: 1688067675}
     - target: {fileID: 1810440422395815202, guid: aa1587ed9ff9f3544ba5188a786b4c03,
         type: 3}
       propertyPath: m_Name
