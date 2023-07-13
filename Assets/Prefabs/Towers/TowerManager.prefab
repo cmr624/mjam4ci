@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7898197534467394155}
+  - component: {fileID: 5453241480918638015}
   m_Layer: 0
   m_Name: TowerManager
   m_TagString: Untagged
@@ -31,3 +32,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5453241480918638015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7898197534467394152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f1910181d8b9d54d91c41cfee7a4b4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_towerDefinitions:
+  - Type: 0
+    Stats:
+      MaxHealth: 10
+      Cost: 10
+    Visuals: {fileID: 4937899351878067977, guid: 3caa6740a7c5fce4493930a1b2acd266,
+      type: 3}
+  - Type: 1
+    Stats:
+      MaxHealth: 15
+      Cost: 15
+    Visuals: {fileID: 4937899351878067977, guid: a3d91552418ef1f45b243820cf1eb646,
+      type: 3}
+  - Type: 2
+    Stats:
+      MaxHealth: 1
+      Cost: 1
+    Visuals: {fileID: 4937899351878067977, guid: 9021e06a25a40b646816f544ed1946de,
+      type: 3}

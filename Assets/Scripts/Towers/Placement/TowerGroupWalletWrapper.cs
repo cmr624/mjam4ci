@@ -22,7 +22,8 @@ namespace Towers
                 return new Result()
                 {
                     Success = false,
-                    Reason = $"Cannot afford: tower costs {tower.Cost} and you have {wallet.Amount.Value}"
+                    BriefReason = "Cannot afford",
+                    FullReason = $"Cannot afford: tower costs {tower.Cost} and you have {wallet.Amount.Value}"
                 };
             }
 

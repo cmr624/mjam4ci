@@ -7,10 +7,7 @@ public class TowerPlacementController : MonoBehaviour
     private KeyCode m_placeKey;
 
     [SerializeField]
-    private TowerStats m_stats;
-    [SerializeField]
-    private TowerVisuals m_towerVisualsPrefab;
-
+    private TowerGameDefinitions.TowerType m_towerType;
     [SerializeField]
     private TowerGameDefinitions.TowerGroupColour m_groupColour;
     [SerializeField]
@@ -19,18 +16,26 @@ public class TowerPlacementController : MonoBehaviour
     private Wallet m_wallet;
     [SerializeField]
     private Transform m_playerTransform;
+    [SerializeField]
+    private TimedText m_errorText;
+    [SerializeField]
+    private Transform m_towerParent;
 
     private void Update()
     {
         if (Input.GetKeyDown(m_placeKey))
         {
-            
+            PlaceTower();
         }
     }
 
     private void PlaceTower()
     {
-        Tower tower = new Tower(m_stats);
+        m_errorText.ClearText();
+
+        TowerGameDefinitions.TowerDefintion towerDef = m_towerManager.GetType(m_towerType);
+
+        Tower tower = new Tower(towerDef.Stats);
         tower.Position.Value = m_playerTransform.position;
 
         TowerGroup group = m_towerManager.GetGroup(m_groupColour);
@@ -41,8 +46,12 @@ public class TowerPlacementController : MonoBehaviour
 
         if (result.Success)
         {
-            TowerVisuals towerVisuals = Instantiate(m_towerVisualsPrefab, transform);
+            TowerVisuals towerVisuals = Instantiate(towerDef.Visuals, m_towerParent);
             towerVisuals.SetUp(tower);
+        }
+        else
+        {
+            m_errorText.SetText(result.BriefReason);
         }
     }
 

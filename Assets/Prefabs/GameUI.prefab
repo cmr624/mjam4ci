@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 5728351424163929634}
   - component: {fileID: 4460652773334500075}
   - component: {fileID: 7076602149826720643}
-  - component: {fileID: 7759303973851227102}
+  - component: {fileID: 3796513607060458548}
   m_Layer: 5
-  m_Name: BluePowerLevelDisplay (1)
+  m_Name: PlacementErrorDisplay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,11 +34,11 @@ RectTransform:
   m_Father: {fileID: 5236129029912120386}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.00079345703, y: 0}
-  m_SizeDelta: {x: 500, y: 50}
-  m_Pivot: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 0.0059814453, y: -200}
+  m_SizeDelta: {x: 1000, y: 50}
+  m_Pivot: {x: 0, y: 1}
 --- !u!222 &4460652773334500075
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -136,7 +136,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!114 &7759303973851227102
+--- !u!114 &3796513607060458548
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,13 +145,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 185439983815123350}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f3d8a1a5f83ec24ea00536f6195105d, type: 3}
+  m_Script: {fileID: 11500000, guid: ff5ddda3df32dcb408387187150d9dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_defaultDisplayTime: 4
   m_text: {fileID: 7076602149826720643}
-  m_dipslayString: 'Blue Power Level: {0}'
-  m_colour: 2
-  m_towerGameDefinitions: {fileID: 0}
 --- !u!1 &1557456906807705027
 GameObject:
   m_ObjectHideFlags: 0

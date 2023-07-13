@@ -1,13 +1,37 @@
+using System;
+using System.Linq;
 using Towers;
 using UnityEngine;
 
 public class TowerGameDefinitions : MonoBehaviour
 {
+    //There's probably a more extensible way to do this but it's the simplest way for the jam
+    public enum TowerType
+    {
+        Red,
+        Green,
+        Blue,
+        //e.g. BigRed
+        //Add new tower types here and add in inspector
+    }
+
+    [Serializable]
+    public struct TowerDefintion 
+    {
+        public TowerType Type;
+        public TowerStats Stats;
+        public TowerVisuals Visuals;
+    }
+
+    [SerializeField]
+    private TowerDefintion[] m_towerDefinitions;
+
     public enum TowerGroupColour
     {
         Red,
         Green,
         Blue
+        //Add new tower groups here then add an instance variable to this class and append to switch statement
     }
 
     public TowerGroup RedGroup { get; private set; }
@@ -52,6 +76,10 @@ public class TowerGameDefinitions : MonoBehaviour
         //Add starting towers here:
     }
 
+    public TowerDefintion GetType(TowerType type)
+    {
+        return m_towerDefinitions.FirstOrDefault(def => def.Type == type);
+    }
 
     public TowerGroup GetGroup(TowerGroupColour colour)
     {

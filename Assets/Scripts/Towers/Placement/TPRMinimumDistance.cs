@@ -24,7 +24,8 @@ namespace Towers
                 if(dist < m_minDistance)
                 {
                     result.Success = false;
-                    result.Reason += $"Tower {t} and Tower {tower} are {dist}m apart. They need to be {m_minDistance}m at a minimum.\n";
+                    result.BriefReason += $"Too close to tower";
+                    result.FullReason += $"Tower {t} and Tower {tower} are {dist}m apart. They need to be {m_minDistance}m at a minimum.\n";
                 }
             }
 
