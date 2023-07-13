@@ -12,10 +12,18 @@ namespace Towers
 
         public static Result Condense(List<Result> results)
         {
+            if(results.Count() <= 0)
+            {
+                return new Result()
+                {
+                    Success = true
+                };
+            }
+
             return new Result()
             {
                 Success = results.Select(result => result.Success).Aggregate((a, b) => a && b),
-                BriefReason = results.Select(result => result.BriefReason).Aggregate((a, b) => $"{a}\n{b}"),
+                BriefReason = results.Select(result => result.BriefReason).First(),
                 FullReason = results.Select(result => result.FullReason).Aggregate((a, b) => $"{a}\n{b}"),
             };
         }
