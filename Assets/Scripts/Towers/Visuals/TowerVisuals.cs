@@ -9,7 +9,7 @@ namespace Towers
         public void SetUp(Tower tower)
         {
             tower.Position.Subscribe(SetPosition);
-            //TODO: healthbar?
+            //TODO: healthbar
         }
 
         private void SetPosition(Vector3 position)

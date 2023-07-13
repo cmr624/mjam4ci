@@ -37,9 +37,12 @@ public class TowerGameDefinitions : MonoBehaviour
     public TowerGroup RedGroup { get; private set; }
     public TowerGroup GreenGroup { get; private set; }
     public TowerGroup BlueGroup { get; private set; }
+    public TowerLedger Ledger { get; private set; }
 
     private void Awake()
     {
+        Ledger = new TowerLedger();
+
         GreenGroup = new TowerGroup(name: "Green Group")
         {
             PlacementRules = new ITowerPlacementRule[]

@@ -16,10 +16,13 @@ namespace Towers
         public ClampedFloatTopic Health { get; } = new ClampedFloatTopic();
         public Topic<Vector3> Position { get; } = new Topic<Vector3>();
 
+        public Action OnDestroyed;
+
         public Tower(TowerStats data)
         {
             Cost = data.Cost;
             Health.Max.Value = data.MaxHealth;
+            Health.SetToMax();
         }
 
         public override string ToString()

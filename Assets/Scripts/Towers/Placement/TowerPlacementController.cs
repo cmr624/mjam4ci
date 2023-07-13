@@ -11,7 +11,7 @@ public class TowerPlacementController : MonoBehaviour
     [SerializeField]
     private TowerGameDefinitions.TowerGroupColour m_groupColour;
     [SerializeField]
-    private TowerGameDefinitions m_towerManager;
+    private TowerGameDefinitions m_towerDefinitions;
     [SerializeField]
     private Wallet m_wallet;
     [SerializeField]
@@ -33,21 +33,29 @@ public class TowerPlacementController : MonoBehaviour
     {
         m_errorText.ClearText();
 
-        TowerGameDefinitions.TowerDefintion towerDef = m_towerManager.GetType(m_towerType);
+        //Get the kind of tower to make
+        TowerGameDefinitions.TowerDefintion towerDef = m_towerDefinitions.GetType(m_towerType);
 
+        //Init the tower object
         Tower tower = new Tower(towerDef.Stats);
         tower.Position.Value = m_playerTransform.position;
 
-        TowerGroup group = m_towerManager.GetGroup(m_groupColour);
+        //Get the group
+        TowerGroup group = m_towerDefinitions.GetGroup(m_groupColour);
 
+        //Try to add the tower to the group
         Result result = TowerGroupWalletWrapper.TryPlaceTower(group, m_wallet, tower);
 
         Debug.Log(result);
 
         if (result.Success)
         {
+            //If the ading was successful, create visuals for the tower
             TowerVisuals towerVisuals = Instantiate(towerDef.Visuals, m_towerParent);
             towerVisuals.SetUp(tower);
+
+            //Add the tower, visuals and group to the ledger
+            m_towerDefinitions.Ledger.AddTower(tower, towerVisuals, group);
         }
         else
         {

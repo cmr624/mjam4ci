@@ -19,4 +19,14 @@ public class ClampedFloatTopic : Topic<float>
         Min.Subscribe(Refresh);
         Max.Subscribe(Refresh);
     }
+
+    public void SetToMax()
+    {
+        Value = Max.Value;
+    }
+
+    public void SetToMin()
+    {
+        Value = Min.Value;
+    }
 }
