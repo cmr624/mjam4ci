@@ -7,37 +7,59 @@ public class TowerPlacementController : MonoBehaviour
     private KeyCode m_placeKey;
 
     [SerializeField]
-    private TowerStats m_stats;
-    [SerializeField]
-    private TowerVisuals m_towerVisualsPrefab;
-
+    private TowerGameDefinitions.TowerType m_towerType;
     [SerializeField]
     private TowerGameDefinitions.TowerGroupColour m_groupColour;
     [SerializeField]
-    private TowerGameDefinitions m_towerManager;
+    private TowerGameDefinitions m_towerDefinitions;
     [SerializeField]
     private Wallet m_wallet;
     [SerializeField]
     private Transform m_playerTransform;
+    [SerializeField]
+    private TimedText m_errorText;
+    [SerializeField]
+    private Transform m_towerParent;
 
     private void Update()
     {
         if (Input.GetKeyDown(m_placeKey))
         {
-            Tower tower = new Tower(m_stats);
-            tower.Position.Value = m_playerTransform.position;
+            PlaceTower();
+        }
+    }
 
-            TowerGroup group = m_towerManager.GetGroup(m_groupColour);
+    private void PlaceTower()
+    {
+        m_errorText.ClearText();
 
-            Result result = TowerGroupWalletWrapper.TryPlaceTower(group, m_wallet, tower);
+        //Get the kind of tower to make
+        TowerGameDefinitions.TowerDefintion towerDef = m_towerDefinitions.GetType(m_towerType);
 
-            Debug.Log(result);
+        //Init the tower object
+        Tower tower = new Tower(towerDef.Stats);
+        tower.Position.Value = m_playerTransform.position;
 
-            if (result.Success)
-            {
-                TowerVisuals towerVisuals = Instantiate(m_towerVisualsPrefab, transform);
-                towerVisuals.SetUp(tower);
-            }
+        //Get the group
+        TowerGroup group = m_towerDefinitions.GetGroup(m_groupColour);
+
+        //Try to add the tower to the group
+        Result result = TowerGroupWalletWrapper.TryPlaceTower(group, m_wallet, tower);
+
+        Debug.Log(result);
+
+        if (result.Success)
+        {
+            //If the ading was successful, create visuals for the tower
+            TowerVisuals towerVisuals = Instantiate(towerDef.Visuals, m_towerParent);
+            towerVisuals.SetUp(tower);
+
+            //Add the tower, visuals and group to the ledger
+            m_towerDefinitions.Ledger.AddTower(tower, towerVisuals, group);
+        }
+        else
+        {
+            m_errorText.SetText(result.BriefReason);
         }
     }
 

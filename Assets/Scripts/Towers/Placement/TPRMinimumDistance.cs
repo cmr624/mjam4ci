@@ -1,6 +1,8 @@
 namespace Towers
 {
     //TPR = TowerPlacement Rule
+    //Only considers towers in the group into which the tower
+    //is trying to be added
     public class TPRMinimumDistance : ITowerPlacementRule
     {
         private float m_minDistance;
@@ -24,7 +26,8 @@ namespace Towers
                 if(dist < m_minDistance)
                 {
                     result.Success = false;
-                    result.Reason += $"Tower {t} and Tower {tower} are {dist}m apart. They need to be {m_minDistance}m at a minimum.\n";
+                    result.BriefReason = $"Too close to another tower";
+                    result.FullReason += $"Tower {t} and Tower {tower} are {dist}m apart. They need to be {m_minDistance}m at a minimum.\n";
                 }
             }
 
