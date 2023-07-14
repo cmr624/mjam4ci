@@ -36,6 +36,8 @@ public class GameParameters : MonoBehaviour
         string parameters = JsonUtility.ToJson(Parameters.Value);
 
         File.WriteAllText($"{Application.persistentDataPath}/{m_filePath}", parameters);
+
+        Debug.Log($"Saved parameters to {Application.persistentDataPath}/{m_filePath}");
     }
 
     public void Load()
@@ -43,5 +45,7 @@ public class GameParameters : MonoBehaviour
         string fileContents = File.ReadAllText($"{Application.persistentDataPath}/{m_filePath}");
 
         Parameters.Value = JsonUtility.FromJson<Parameters>(fileContents);
+
+        Debug.Log($"Loaded parameters from {Application.persistentDataPath}/{m_filePath}");
     }
 }

@@ -3,9 +3,12 @@ using MoreMountains.TopDownEngine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using UnityEngine;
 
+
+[Serializable]
 public class EnemySpawnInfo
 {
     public string ID;
@@ -15,6 +18,7 @@ public class EnemySpawnInfo
     public int RepeatNumber;
 }
 
+[Serializable]
 public class Wave
 {
     public string Name;
@@ -23,6 +27,7 @@ public class Wave
     public EnemySpawnInfo[] Enemies;
 }
 
+[Serializable]
 public class AllWaves
 {
     public Wave[] Waves;
@@ -37,14 +42,15 @@ public class WaveManager : MonoBehaviour
         public MMObjectPooler Pool;
     }
 
+    [Tooltip("Relative to the persistent data path")]
+    [SerializeField]
+    private string m_filePath = "Waves.json";
     [SerializeField]
     private PoolID[] m_objectPools;
 
     //TEMP
     [SerializeField]
     private KeyCode m_startNextWaveKey;
-    [SerializeField]
-    private KeyCode m_endCurrentWave;
     //end TEMP
 
     private int m_currentWave;
@@ -59,50 +65,11 @@ public class WaveManager : MonoBehaviour
 
     private void Awake()
     {
-        //TODO: load from file so it can be changed without rebuilding
+        string fileContents = File.ReadAllText($"{Application.persistentDataPath}/{m_filePath}");
 
-        m_waves = new AllWaves()
-        {
-            Waves = new Wave[]
-            {
-                new Wave
-                {
-                    Name = "Test Wave 1",
-                    Enemies = new EnemySpawnInfo[]
-                    {
-                        new EnemySpawnInfo
-                        {
-                            ID = "Test",
-                            Position = new Vector3(10f, 0f, 10f),
-                            Time = 0,
-                        }
-                    }
-                },
-                new Wave
-                {
-                    Name = "Test Wave 2",
-                    Enemies = new EnemySpawnInfo[]
-                    {
-                        new EnemySpawnInfo
-                        {
-                            ID = "Test",
-                            Position = new Vector3(10f, 0f, 10f),
-                            Time = 0,
-                            RepeatTime = 1,
-                            RepeatNumber = 5
-                        },  
-                        new EnemySpawnInfo
-                        {
-                            ID = "Test",
-                            Position = new Vector3(10f, 0f, 10f),
-                            Time = 7,
-                            RepeatTime = 0.5f,
-                            RepeatNumber = 5,
-                        },
-                    },
-                },
-            }
-        };
+        m_waves = JsonUtility.FromJson<AllWaves>(fileContents);
+
+        Debug.Log($"Loaded waves from {Application.persistentDataPath}/{m_filePath}");
     }
 
     private void Update()

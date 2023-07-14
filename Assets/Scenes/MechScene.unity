@@ -1664,6 +1664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c854b16389be7444da6d410ff8fc0a5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_filePath: Waves.json
   m_objectPools:
   - ID: Test
     Pool: {fileID: 1515912987}
