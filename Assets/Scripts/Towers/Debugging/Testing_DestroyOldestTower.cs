@@ -43,7 +43,7 @@ public class Testing_DestroyOldestTower : MonoBehaviour
             return;
         }
 
-        tower.Health.Value -= 10f;
+        //tower.Health.Value -= 10f;
     }
 
     private Tower GetOldest()

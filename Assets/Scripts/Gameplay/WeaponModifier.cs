@@ -31,6 +31,5 @@ public class WeaponModifier : MonoBehaviour
            //   gameObject.GetComponent<Projectile>().
             //  GetComponent<DamageOnTouch>().MinDamageCaused
              // += amount * 10;
-       
     }
 }

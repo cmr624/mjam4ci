@@ -23,14 +23,19 @@ namespace Towers
                 Visuals = visuals,
                 Group = group
             });
+            
+            visuals.m_health.OnDeath += () =>
+            {
+                DestroyTower(tower);
+            };
 
-            tower.Health.Subscribe((health) =>
+            /*tower.Health.Subscribe((health) =>
             {
                 if (health == tower.Health.Min.Value)
                 {
                     DestroyTower(tower);
                 }
-            });
+            });*/
         }
 
         public void DestroyTower(Tower tower)

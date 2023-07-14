@@ -21,7 +21,7 @@ TagManager:
   - Obstacles
   - Ground
   - Player
-  - ObstaclesDoors
+  - Towers
   - NoPathfinding
   - Enemies
   - NoCollisions
