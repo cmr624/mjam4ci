@@ -1,0 +1,40 @@
+{
+	"Waves":
+	[
+		{
+			"Name":"Test Wave 1",
+			"Description":"",
+			"Enemies":
+			[
+				{
+					"ID":"Test",
+					"Time":0.0,
+					"Position":{"x":10.0,"y":0.0,"z":10.0},
+					"RepeatTime":0.0,
+					"RepeatNumber":0
+				}
+			]
+		},
+		{
+			"Name":"Test Wave 2",
+			"Description":"",
+			"Enemies":
+			[
+				{
+					"ID":"Test",
+					"Time":0.0,
+					"Position":{"x":10.0,"y":0.0,"z":10.0},
+					"RepeatTime":1.0,
+					"RepeatNumber":5
+				},
+				{
+					"ID":"Test",
+					"Time":7.0,
+					"Position":{"x":10.0,"y":0.0,"z":10.0},
+					"RepeatTime":0.5,
+					"RepeatNumber":5
+				}
+			]
+		}
+	]
+}
