@@ -90,7 +90,7 @@ public class TowerGameDefinitions : MonoBehaviour
         GreenGroup.PlacementRules = GreenGroup.PlacementRules.Append(minDistRule);
         BlueGroup.PlacementRules = BlueGroup.PlacementRules.Append(minDistRule);
 
-        //Add starting towers here:
+        //Add starting towers here in necessary:
     }
 
     public TowerDefintion GetType(TowerType type)
