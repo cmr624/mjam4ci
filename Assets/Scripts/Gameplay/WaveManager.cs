@@ -49,8 +49,13 @@ public class WaveManager : MonoBehaviour
 
     private int m_currentWave;
     private AllWaves m_waves;
-    private List<GameObject> m_enemies = new List<GameObject>();
     private Coroutine m_waveCoroutine;
+
+    public Topic<Wave> CurrentWave { get; } = new Topic<Wave>();
+    public Topic<List<EnemySpawnInfo>> ToSpawn { get; } = new Topic<List<EnemySpawnInfo>>();
+    public Topic<List<Health>> EnemiesRemaining { get; } = new Topic<List<Health>>(new List<Health>());
+
+    public bool WaveRunning => CurrentWave.Value != null;
 
     private void Awake()
     {
@@ -92,7 +97,7 @@ public class WaveManager : MonoBehaviour
                             Position = new Vector3(10f, 0f, 10f),
                             Time = 7,
                             RepeatTime = 0.5f,
-                            RepeatNumber = 10,
+                            RepeatNumber = 5,
                         },
                     },
                 },
@@ -118,7 +123,7 @@ public class WaveManager : MonoBehaviour
 
     public bool StartWave(int index)
     {
-        if(m_waveCoroutine != null)
+        if(WaveRunning)
         {
             Debug.LogError($"Cannot start wave while a wave is already running");
             return false;
@@ -134,38 +139,40 @@ public class WaveManager : MonoBehaviour
         return true;
     }
 
-    public void EndWave()
-    {
-        if(m_waveCoroutine != null)
-        {
-            StopCoroutine(m_waveCoroutine);
-            m_waveCoroutine = null;
-        }
-    }
-
     private IEnumerator SpawnWave(Wave wave)
     {
+        CurrentWave.Value = wave;
+        Debug.Log($"Starting Wave {wave}");
+
         float time = 0f;
-        List<EnemySpawnInfo> toSpawn = ProcessEnemyInfos(wave.Enemies);
+        ToSpawn.Value = ProcessEnemyInfos(wave.Enemies);
         List<EnemySpawnInfo> spawnedThisFrame = new List<EnemySpawnInfo>();
 
-        while (toSpawn.Count > 0)
+        while (ToSpawn.Value.Count > 0)
         {
             spawnedThisFrame.Clear();
 
-            foreach (EnemySpawnInfo info in toSpawn)
+            foreach (EnemySpawnInfo info in ToSpawn.Value)
             {
                 if(info.Time < time)
                 {
                     spawnedThisFrame.Add(info);
 
-                    //TODO: on all enemies destroyed, end wave
-                    m_enemies.Add(Spawn(info));
+                    Health health = Spawn(info);
+
+                    EnemiesRemaining.Value.Add(health);
+                    EnemiesRemaining.Refresh();
+
+                    health.OnDeath += () =>
+                    {
+                        OnDeath(health);
+                    };
                 }
             }
 
             //Remove elements from list after loop is complete
-            spawnedThisFrame.ForEach(info => toSpawn.Remove(info));
+            spawnedThisFrame.ForEach(info => ToSpawn.Value.Remove(info));
+            ToSpawn.Refresh();
 
             yield return null;
 
@@ -173,6 +180,20 @@ public class WaveManager : MonoBehaviour
         }
 
         m_waveCoroutine = null;
+    }
+
+    private void OnDeath(Health health)
+    {
+        EnemiesRemaining.Value.Remove(health);
+        EnemiesRemaining.Refresh();
+
+        Debug.Log($"Spawned enemy dies: there are {ToSpawn.Value.Count} left to spawn and {EnemiesRemaining.Value.Count} left to kill");
+
+        if(ToSpawn.Value.Count <= 0 && EnemiesRemaining.Value.Count <= 0)
+        {
+            Debug.Log($"Completed wave {m_currentWave}");
+            CurrentWave.Value = null;
+        }
     }
 
     //Expands repeat info into multiple enemy spawn info entries
@@ -198,7 +219,7 @@ public class WaveManager : MonoBehaviour
         return expandedList;
     }
 
-    protected GameObject Spawn(EnemySpawnInfo info)
+    protected Health Spawn(EnemySpawnInfo info)
     {
         MMObjectPooler pool = m_objectPools.FirstOrDefault(p => p.ID == info.ID).Pool;
 
@@ -222,17 +243,18 @@ public class WaveManager : MonoBehaviour
             throw new Exception(gameObject.name + " is trying to spawn objects that don't have a PoolableObject component.");
         }
 
-        obj.SetActive(true);
-        obj.MMGetComponentNoAlloc<MMPoolableObject>().TriggerOnSpawnComplete();
-
         Health objectHealth = obj.MMGetComponentNoAlloc<Health>();
-        if (objectHealth != null)
+
+        if(objectHealth == null)
         {
-            objectHealth.Revive();
+            throw new Exception(gameObject.name + " requires the Health component but none could be found");
         }
 
         obj.transform.position = info.Position;
+        obj.SetActive(true);
+        obj.MMGetComponentNoAlloc<MMPoolableObject>().TriggerOnSpawnComplete();
+        objectHealth.Revive();
 
-        return obj;
+        return objectHealth;
     }
 }
