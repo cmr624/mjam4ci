@@ -452,6 +452,7 @@ GameObject:
   - component: {fileID: 1316605544111048047}
   - component: {fileID: 1316605544111048041}
   - component: {fileID: 1316605544111048040}
+  - component: {fileID: -7649580095595338072}
   m_Layer: 13
   m_Name: PoolableFollow
   m_TagString: Enemy
@@ -561,8 +562,8 @@ MonoBehaviour:
   ImmuneToKnockback: 0
   ImmuneToKnockbackIfZeroDamage: 0
   KnockbackForceMultiplier: 1
-  DestroyOnDeath: 0
-  DelayBeforeDestruction: 0
+  DestroyOnDeath: 1
+  DelayBeforeDestruction: 1
   PointsWhenDestroyed: 0
   RespawnAtInitialLocation: 0
   DisableControllerOnDeath: 1
@@ -1121,6 +1122,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-7649580095595338072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1316605544111048033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84e52fb9b5604401db920884c90577b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AmountOfResource: 10
 --- !u!1 &8751697194366442669
 GameObject:
   m_ObjectHideFlags: 0

@@ -1723,7 +1723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a281bd70fc9480448850980ffb0ef08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CanSpawn: 0
+  CanSpawn: 1
   MinFrequency: 1
   MaxFrequency: 1
   CanSpawnButton: 0
@@ -2368,6 +2368,11 @@ PrefabInstance:
       propertyPath: AxisPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 256934339790862311, guid: 65cd9299482f640438b6b06d242ea3cf,
+        type: 3}
+      propertyPath: ButtonReleased.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReloadLevel
+      objectReference: {fileID: 0}
     - target: {fileID: 256941935683935043, guid: 65cd9299482f640438b6b06d242ea3cf,
         type: 3}
       propertyPath: ButtonPressed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2472,6 +2477,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4009399229837370455, guid: 8af8f2d82c6a3443e9d3ba2270ac7862,
+        type: 3}
+      propertyPath: m_towerGameDefinitions
+      value: 
+      objectReference: {fileID: 1688067675}
+    - target: {fileID: 6690086247799332208, guid: 8af8f2d82c6a3443e9d3ba2270ac7862,
+        type: 3}
+      propertyPath: DashDuration
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6721088437274288988, guid: 8af8f2d82c6a3443e9d3ba2270ac7862,
         type: 3}
       propertyPath: m_Name
@@ -2532,6 +2547,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6731993339484969707, guid: 8af8f2d82c6a3443e9d3ba2270ac7862,
+        type: 3}
+      propertyPath: m_towerGameDefinitions
+      value: 
+      objectReference: {fileID: 1688067675}
+    - target: {fileID: 8965201247456679315, guid: 8af8f2d82c6a3443e9d3ba2270ac7862,
+        type: 3}
+      propertyPath: m_towerGameDefinitions
+      value: 
+      objectReference: {fileID: 1688067675}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8af8f2d82c6a3443e9d3ba2270ac7862, type: 3}
 --- !u!114 &6799108551260582392 stripped
