@@ -18,7 +18,7 @@ public class WeaponModifier : MonoBehaviour
     {
        m_weapon = GetComponent<CharacterMultipleHandleWeapon>(); 
        // based on the current power level of the red tower, update all weapons' damage
-       m_towerGameDefinitions.GetGroup(TowerGameDefinitions.TowerGroupColour.Red).PowerLevel.Subscribe(UpdateWeapons);
+       m_towerGameDefinitions.RedPowerLevel.Subscribe(UpdateWeapons);
     }
 
     private void UpdateWeapons(float amount)

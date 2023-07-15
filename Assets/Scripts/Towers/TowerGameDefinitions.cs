@@ -35,8 +35,12 @@ public class TowerGameDefinitions : MonoBehaviour
     }
 
     public TowerGroup RedGroup { get; private set; }
+    public ClampedFloatTopic RedPowerLevel { get; } = new ClampedFloatTopic(min: 0f, max: 1f);
+
     public TowerGroup GreenGroup { get; private set; }
     public TowerGroup BlueGroup { get; private set; }
+    public ClampedFloatTopic BluePowerLevel { get; } = new ClampedFloatTopic(min: 0f, max: 1f);
+
     public TowerLedger Ledger { get; private set; }
 
     private void Awake()
@@ -50,9 +54,6 @@ public class TowerGameDefinitions : MonoBehaviour
                 //new TPRMinimumDistance(minDistance: 5f), <- this rule only considers towers in its own group. See below for rule that considers all towers
                 //Add placement rules here
             },
-            //Define the calculation for power level here
-            //TODO make this a game parameter
-            Calculator = new PLCMaxTowers(5),
         };
 
         RedGroup = new TowerGroup(name: "Red Group")
@@ -62,9 +63,13 @@ public class TowerGameDefinitions : MonoBehaviour
                 //new TPRMinimumDistance(minDistance: 10f),
                 //Add placement rules here
             },
-            //Define the calculation for power level here
-            Calculator = new PLCMaxTowers(10),
         };
+
+        IPowerLevelCalculator redGroupPowerLevelCalculator = new PLCMaxTowers(10);
+        RedGroup.Towers.Subscribe(towers =>
+        {
+            RedPowerLevel.Value = redGroupPowerLevelCalculator.CalculatePowerLevel(towers);
+        });
 
         BlueGroup = new TowerGroup(name: "Blue Group")
         {
@@ -73,9 +78,13 @@ public class TowerGameDefinitions : MonoBehaviour
                 //new TPRMinimumDistance(minDistance: 20f),
                 //Add placement rules here
             },
-            //Define the calculation for power level here
-            Calculator = new PLCMaxTowers(1),
         };
+
+        IPowerLevelCalculator blueGroupPowerLevelCalculator = new PLCMaxTowers(10);
+        BlueGroup.Towers.Subscribe(towers =>
+        {
+            BluePowerLevel.Value = blueGroupPowerLevelCalculator.CalculatePowerLevel(towers);
+        });
 
         TowerGroup[] groups = new TowerGroup[]
         {

@@ -7,9 +7,7 @@ namespace Towers
     {
         public string Name { get; }
         public Topic<List<Tower>> Towers = new Topic<List<Tower>>(new List<Tower>());
-        public ClampedFloatTopic PowerLevel { get; } = new ClampedFloatTopic(min: 0f, max: 1f);
         public IEnumerable<ITowerPlacementRule> PlacementRules { get; set; } = new List<ITowerPlacementRule>();
-        public IPowerLevelCalculator Calculator { get; set; }
 
         public TowerGroup(string name)
         {
@@ -50,14 +48,12 @@ namespace Towers
         public void AddTower(Tower tower)
         {
             Towers.Value.Add(tower);
-            PowerLevel.Value = Calculator.CalculatePowerLevel(Towers.Value);
             Towers.Refresh();
         }
 
         public void RemoveTower(Tower tower)
         {
             Towers.Value.Remove(tower);
-            PowerLevel.Value = Calculator.CalculatePowerLevel(Towers.Value);
             Towers.Refresh();
         }
     }

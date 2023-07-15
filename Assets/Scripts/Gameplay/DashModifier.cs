@@ -15,7 +15,7 @@ public class DashModifier : MonoBehaviour
     {
         m_dashAbility = GetComponent<CharacterDash3D>();
         // based on the blue power level in tower game definitions, update the dash ability speed 
-        m_towerGameDefinitions.GetGroup(TowerGameDefinitions.TowerGroupColour.Blue).PowerLevel.Subscribe(UpdateDash);
+        m_towerGameDefinitions.BluePowerLevel.Subscribe(UpdateDash);
     }
 
     // Update is called once per frame

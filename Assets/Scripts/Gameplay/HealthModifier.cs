@@ -14,7 +14,7 @@ public class HealthModifier : MonoBehaviour
     {
        m_health = GetComponent<Health>();
        // based on the current power level of the green tower in m_towerGameDefinitions update the health
-       m_towerGameDefinitions.GetGroup(TowerGameDefinitions.TowerGroupColour.Green).PowerLevel.Subscribe(UpdateHealth);
+       //m_towerGameDefinitions.GetGroup(TowerGameDefinitions.TowerGroupColour.Green).PowerLevel.Subscribe(UpdateHealth);
     }
 
     // update health function
