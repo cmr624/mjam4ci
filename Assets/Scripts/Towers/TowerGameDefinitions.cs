@@ -51,6 +51,7 @@ public class TowerGameDefinitions : MonoBehaviour
                 //Add placement rules here
             },
             //Define the calculation for power level here
+            //TODO make this a game parameter
             Calculator = new PLCMaxTowers(5),
         };
 

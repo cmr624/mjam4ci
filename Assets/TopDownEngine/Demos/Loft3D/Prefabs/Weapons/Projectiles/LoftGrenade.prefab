@@ -29,6 +29,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2490828765139917219}
   m_RootOrder: 3
@@ -57,10 +58,43 @@ MonoBehaviour:
   ForceTimescaleMode: 0
   ForcedTimescaleMode: 1
   DurationMultiplier: 1
+  RandomizeDuration: 0
+  RandomDurationMultiplier: {x: 0.5, y: 1.5}
   DisplayFullDurationDetails: 0
   PlayerTimescaleMode: 1
+  OnlyPlayIfWithinRange: 0
+  RangeCenter: {fileID: 0}
+  RangeDistance: 5
+  UseRangeFalloff: 0
+  RangeFalloff:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  RemapRangeFalloff: {x: 0, y: 1}
+  IgnoreRangeEvents: 0
   CooldownDuration: 0
   InitialDelay: 0
+  CanPlay: 1
   CanPlayWhileAlreadyPlaying: 1
   ChanceToPlay: 100
   FeedbacksIntensity: 1
@@ -80,6 +114,12 @@ MonoBehaviour:
       m_PersistentCalls:
         m_Calls: []
     OnComplete:
+      m_PersistentCalls:
+        m_Calls: []
+    OnRestoreInitialValues:
+      m_PersistentCalls:
+        m_Calls: []
+    OnSkipToTheEnd:
       m_PersistentCalls:
         m_Calls: []
   DebugActive: 0
@@ -184,8 +224,8 @@ GameObject:
   - component: {fileID: 2490828765139917219}
   - component: {fileID: 2490828765139917217}
   - component: {fileID: 2490828765139917218}
-  - component: {fileID: 2490828765139917221}
   - component: {fileID: 1820859917411175295}
+  - component: {fileID: 1780054042720734272}
   m_Layer: 18
   m_Name: LoftGrenade
   m_TagString: Untagged
@@ -203,6 +243,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3, y: 3, z: 5}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2490828766256838809}
   - {fileID: 2490828766017934362}
@@ -240,44 +281,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.25
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2490828765139917221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2490828765139917220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46840d8dc203908469ee327b591ae35f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ActivationMode: 2
-  TriggerMode: 0
-  TargetTriggerLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  TargetTriggerTag: 
-  DelayMode: 0
-  TimeBeforeStateChange: 2
-  FrameCount: 1
-  TargetGameObjects: []
-  TargetBehaviours: []
-  TimeDestructionMode: 1
-  TimedActions:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2490828766328181736}
-        m_MethodName: PlayFeedbacks
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!114 &1820859917411175295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -295,6 +298,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2490828764636830562}
+        m_TargetAssemblyTypeName: 
         m_MethodName: Initialization
         m_Mode: 1
         m_Arguments:
@@ -306,6 +310,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 2490828764636830562}
+        m_TargetAssemblyTypeName: 
         m_MethodName: PlayFeedbacks
         m_Mode: 1
         m_Arguments:
@@ -319,7 +324,7 @@ MonoBehaviour:
   ExecuteOnDisable:
     m_PersistentCalls:
       m_Calls: []
-  LifeTime: 0
+  LifeTime: 3
   FaceDirection: 1
   FaceMovement: 1
   MovementVector: 0
@@ -335,6 +340,22 @@ MonoBehaviour:
   InitialRotation: {x: -20, y: 0, z: 0}
   InitialForceMode: 1
   InitialForceMode2D: 1
+--- !u!114 &1780054042720734272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2490828765139917220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55a9829731bf3d3458319a5a829f1f04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Mode: 1
+  StateOnStart: 1
+  TargetObjects:
+  - {fileID: 2490828766017934367}
 --- !u!1 &2490828766017934367
 GameObject:
   m_ObjectHideFlags: 0
@@ -346,7 +367,7 @@ GameObject:
   - component: {fileID: 2490828766017934362}
   - component: {fileID: 2490828766017934365}
   - component: {fileID: 2490828766017934364}
-  m_Layer: 0
+  m_Layer: 18
   m_Name: DamageOnTouch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -363,6 +384,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 3}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2490828765139917219}
   m_RootOrder: 1
@@ -395,22 +417,39 @@ MonoBehaviour:
   TargetLayerMask:
     serializedVersion: 2
     m_Bits: 8192
+  Owner: {fileID: 0}
+  TriggerFilter: 195
   MinDamageCaused: 200
   MaxDamageCaused: 200
-  DamageCausedKnockbackType: 1
+  TypedDamages: []
+  DamageDirectionMode: 1
+  DamageCausedKnockbackType: 0
   DamageCausedKnockbackDirection: 0
   DamageCausedKnockbackForce: {x: 10, y: 10, z: 0}
   InvincibilityDuration: 0.5
-  TriggerFilter: 195
+  RepeatDamageOverTime: 0
+  AmountOfRepeats: 3
+  DurationBetweenRepeats: 1
+  DamageOverTimeInterruptible: 1
+  RepeatedDamageType: {fileID: 0}
   DamageTakenEveryTime: 0
   DamageTakenDamageable: 0
   DamageTakenNonDamageable: 0
   DamageTakenKnockbackType: 0
   DamageTakenKnockbackForce: {x: 0, y: 0, z: 0}
   DamageTakenInvincibilityDuration: 0.5
-  HitDamageableFeedback: {fileID: 0}
+  HitDamageableFeedback: {fileID: 2490828766328181736}
   HitNonDamageableFeedback: {fileID: 0}
-  Owner: {fileID: 0}
+  HitAnythingFeedback: {fileID: 0}
+  HitDamageableEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  HitNonDamageableEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  HitAnythingEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2490828766256838808
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,6 +478,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2490828765139917219}
   m_RootOrder: 0
@@ -462,10 +502,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -490,6 +532,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &2490828766328181739
 GameObject:
   m_ObjectHideFlags: 0
@@ -500,7 +543,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2490828766328181655}
   - component: {fileID: 2490828766328181736}
-  - component: {fileID: 2490828766328181654}
   - component: {fileID: 2490828766328181652}
   - component: {fileID: 4697410585136259830}
   - component: {fileID: 3078953929953552678}
@@ -522,6 +564,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2490828765139917219}
   m_RootOrder: 2
@@ -539,7 +582,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Feedbacks:
-  - {fileID: 2490828766328181654}
   - {fileID: 2490828766328181652}
   - {fileID: 225699609270136585}
   - {fileID: 4697410585136259830}
@@ -553,10 +595,43 @@ MonoBehaviour:
   ForceTimescaleMode: 0
   ForcedTimescaleMode: 1
   DurationMultiplier: 1
+  RandomizeDuration: 0
+  RandomDurationMultiplier: {x: 0.5, y: 1.5}
   DisplayFullDurationDetails: 0
   PlayerTimescaleMode: 1
+  OnlyPlayIfWithinRange: 0
+  RangeCenter: {fileID: 0}
+  RangeDistance: 5
+  UseRangeFalloff: 0
+  RangeFalloff:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  RemapRangeFalloff: {x: 0, y: 1}
+  IgnoreRangeEvents: 0
   CooldownDuration: 0
   InitialDelay: 0
+  CanPlay: 1
   CanPlayWhileAlreadyPlaying: 1
   ChanceToPlay: 100
   FeedbacksIntensity: 1
@@ -578,52 +653,13 @@ MonoBehaviour:
     OnComplete:
       m_PersistentCalls:
         m_Calls: []
+    OnRestoreInitialValues:
+      m_PersistentCalls:
+        m_Calls: []
+    OnSkipToTheEnd:
+      m_PersistentCalls:
+        m_Calls: []
   DebugActive: 0
---- !u!114 &2490828766328181654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2490828766328181739}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f129222f02399ae42b78955d953ada11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Active: 1
-  Label: Set Active - DamageOnTouch
-  Chance: 100
-  Timing:
-    TimescaleMode: 0
-    ExcludeFromHoldingPauses: 0
-    ContributeToTotalDuration: 1
-    InitialDelay: 0
-    CooldownDuration: 0
-    InterruptsOnStop: 1
-    NumberOfRepeats: 0
-    RepeatForever: 0
-    DelayBetweenRepeats: 1
-    MMFeedbacksDirectionCondition: 0
-    PlayDirection: 0
-    ConstantIntensity: 0
-    UseIntensityInterval: 0
-    IntensityIntervalMin: 0
-    IntensityIntervalMax: 0
-    Sequence: {fileID: 0}
-    TrackID: 0
-    Quantized: 0
-    TargetBPM: 120
-  DebugActive: 0
-  TargetGameObject: {fileID: 2490828766017934367}
-  SetStateOnInit: 0
-  StateOnInit: 1
-  SetStateOnPlay: 1
-  StateOnPlay: 0
-  SetStateOnStop: 0
-  StateOnStop: 1
-  SetStateOnReset: 0
-  StateOnReset: 1
 --- !u!114 &2490828766328181652
 MonoBehaviour:
   m_ObjectHideFlags: 0

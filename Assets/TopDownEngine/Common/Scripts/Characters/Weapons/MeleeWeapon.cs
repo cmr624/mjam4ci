@@ -211,6 +211,7 @@ namespace MoreMountains.TopDownEngine
 		public override void WeaponUse()
 		{
 			base.WeaponUse();
+			
 			StartCoroutine(MeleeWeaponAttack());
 		}
 

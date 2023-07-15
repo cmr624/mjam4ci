@@ -1,4 +1,5 @@
 using System;
+using MoreMountains.TopDownEngine;
 using UnityEngine;
 
 namespace Towers
@@ -10,19 +11,17 @@ namespace Towers
         public int Cost;
     }
 
-    public class Tower
+    public class Tower 
     {
         public int Cost { get; }
-        public ClampedFloatTopic Health { get; } = new ClampedFloatTopic();
         public Topic<Vector3> Position { get; } = new Topic<Vector3>();
 
         public Action OnDestroyed;
-
+        
         public Tower(TowerStats data)
         {
             Cost = data.Cost;
-            Health.Max.Value = data.MaxHealth;
-            Health.SetToMax();
+
         }
 
         public override string ToString()

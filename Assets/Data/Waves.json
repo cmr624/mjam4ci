@@ -7,11 +7,40 @@
 			"Enemies":
 			[
 				{
-					"ID":"Test",
+					"ID":"Seek",
 					"Time":0.0,
 					"Position":{"x":10.0,"y":0.0,"z":10.0},
-					"RepeatTime":0.0,
-					"RepeatNumber":0
+					"RepeatTime":0.1,
+					"RepeatNumber":5
+				}
+				
+			]
+		},
+		{
+			"Name":"Test Wave 2",
+			"Description":"",
+			"Enemies":
+			[
+				{
+					"ID":"Tower",
+					"Time":0.0,
+					"Position":{"x":0.0,"y":0.0,"z":0.0},
+					"RepeatTime":1.0,
+					"RepeatNumber":4
+				},
+				{
+					"ID":"Shoot",
+					"Time":5.0,
+					"Position":{"x":0.0,"y":3.0,"z":0.0},
+					"RepeatTime":0.5,
+					"RepeatNumber":1
+				},
+				{
+					"ID":"Seek",
+					"Time":12.0,
+					"Position":{"x":0.0,"y":0.0,"z":0.0},
+					"RepeatTime":3.5,
+					"RepeatNumber":5
 				}
 			]
 		},
@@ -21,17 +50,24 @@
 			"Enemies":
 			[
 				{
-					"ID":"Test",
+					"ID":"Tower",
 					"Time":0.0,
-					"Position":{"x":10.0,"y":0.0,"z":10.0},
-					"RepeatTime":1.0,
-					"RepeatNumber":5
+					"Position":{"x":0.0,"y":0.0,"z":0.0},
+					"RepeatTime":0.1,
+					"RepeatNumber":100
 				},
 				{
-					"ID":"Test",
-					"Time":7.0,
-					"Position":{"x":10.0,"y":0.0,"z":10.0},
+					"ID":"Shoot",
+					"Time":5.0,
+					"Position":{"x":0.0,"y":3.0,"z":0.0},
 					"RepeatTime":0.5,
+					"RepeatNumber":1
+				},
+				{
+					"ID":"Seek",
+					"Time":12.0,
+					"Position":{"x":0.0,"y":0.0,"z":0.0},
+					"RepeatTime":3.5,
 					"RepeatNumber":5
 				}
 			]
