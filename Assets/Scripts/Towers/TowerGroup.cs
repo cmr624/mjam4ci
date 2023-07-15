@@ -53,8 +53,11 @@ namespace Towers
 
         public void RemoveTower(Tower tower)
         {
-            Towers.Value.Remove(tower);
-            Towers.Refresh();
+            if (Towers.Value.Contains(tower))
+            {
+                Towers.Value.Remove(tower);
+                Towers.Refresh();
+            }
         }
     }
 }

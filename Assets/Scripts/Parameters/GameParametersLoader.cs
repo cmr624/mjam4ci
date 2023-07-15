@@ -2,6 +2,12 @@ using System;
 using System.IO;
 using UnityEngine;
 
+[Serializable]
+public class TowerStats
+{
+    public float MaxHealth;
+    public int Cost;
+}
 
 [Serializable]
 public class GameParameters
@@ -11,9 +17,27 @@ public class GameParameters
 
     //Towers
     public float AnyTowerMinDistance;
+
+    [Header("Red Tower")]
+    public TowerStats RedTower;
+    public int RedGroupMaxTowers;
+    public float RifleDamageMin;
+    public float RifleDamageMax;
+    [Header("Green Tower")]
+    public TowerStats GreenTower;
     public float GreenTowerMinDistance;
     public float GreenTowerHealRadius;
+    public float GreenTowerTimeBetweenHealing;
+    public float GreenTowerHealAmount;
+    [Header("Blue Tower")]
+    public TowerStats BlueTower;
     public int BlueGroupMaxTowers;
+    //public float DashCoolDownMin;
+    //public float DashCoolDownMax;
+    public float DashDistanceMin;
+    public float DashDistanceMax;
+    public float DashTimeMin;
+    public float DashTimeMax;
 }
 
 public class GameParametersLoader : MonoBehaviour

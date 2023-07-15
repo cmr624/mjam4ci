@@ -9,14 +9,24 @@ namespace Towers
     {
         [HideInInspector]
         public Health m_health;
+
         private void Awake()
         {
             m_health = GetComponent<Health>();
         }
+
         public void SetUp(Tower tower)
         {
             tower.Position.Subscribe(SetPosition);
-            //TODO: healthbar
+            m_health.MaximumHealth = tower.MaxHealth;
+
+            m_health.OnDeath += () =>
+            {
+                tower.Destroy();
+
+                //Game object destruction can be managed by Health component - should it be?
+                Destroy(gameObject);
+            };
         }
 
         private void SetPosition(Vector3 position)

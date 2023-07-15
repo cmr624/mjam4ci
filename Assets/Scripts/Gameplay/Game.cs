@@ -10,13 +10,17 @@ public class Game : MonoBehaviour
     private Wallet m_wallet;
     [SerializeField]
     private TowerGameDefinitions m_towerGameDefinitions;
+    [SerializeField]
+    private TeamGameDefinitions m_teamGameDefinitions;
 
-    void Start()
+    void Awake()
     {
         m_parameters.Load();
 
         m_wallet.Amount.Value = m_parameters.Parameters.StartingResource;
 
-        m_towerGameDefinitions.Create(m_parameters.Parameters);
+        m_teamGameDefinitions.Create();
+
+        m_towerGameDefinitions.Create(m_parameters.Parameters, m_teamGameDefinitions);
     }
 }

@@ -44,22 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f1910181d8b9d54d91c41cfee7a4b4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_towerDefinitions:
+  m_visuals:
   - Type: 0
-    Stats:
-      MaxHealth: 10
-      Cost: 10
     Visuals: {fileID: 4937899351878067977, guid: 3caa6740a7c5fce4493930a1b2acd266,
       type: 3}
   - Type: 1
-    Stats:
-      MaxHealth: 15
-      Cost: 15
     Visuals: {fileID: 4937899351878067977, guid: a3d91552418ef1f45b243820cf1eb646,
       type: 3}
   - Type: 2
-    Stats:
-      MaxHealth: 1
-      Cost: 1
     Visuals: {fileID: 4937899351878067977, guid: 9021e06a25a40b646816f544ed1946de,
       type: 3}

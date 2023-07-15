@@ -426,7 +426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Label: 
-  Radius: 20
+  Radius: 100
   DetectionOriginOffset: {x: 0, y: 0, z: 0}
   TargetLayerMask:
     serializedVersion: 2
@@ -504,14 +504,14 @@ MonoBehaviour:
     m_Bits: 3200
   Owner: {fileID: 0}
   TriggerFilter: 195
-  MinDamageCaused: 2
-  MaxDamageCaused: 2
+  MinDamageCaused: 5
+  MaxDamageCaused: 5
   TypedDamages: []
   DamageDirectionMode: 1
   DamageCausedKnockbackType: 0
   DamageCausedKnockbackDirection: 0
   DamageCausedKnockbackForce: {x: 500, y: 500, z: 0}
-  InvincibilityDuration: 1
+  InvincibilityDuration: 0.5
   RepeatDamageOverTime: 1
   AmountOfRepeats: 100
   DurationBetweenRepeats: 1

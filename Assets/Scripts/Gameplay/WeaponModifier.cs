@@ -7,29 +7,31 @@ using UnityEngine;
 
 public class WeaponModifier : MonoBehaviour
 {
-    
     [SerializeField]
     private TowerGameDefinitions m_towerGameDefinitions;
+    [SerializeField]
+    private GameParametersLoader m_parameters;
 
+    [SerializeField]
+    private DamageOnTouch m_rifleProjectile;
+    //TODO if we want them
+    //[SerializeField]
+    //private DamageOnTouch m_grenade;
+    //[SerializeField]
+    //private CharacterMultipleHandleWeapon m_melee;
 
-    private CharacterMultipleHandleWeapon m_weapon;
-    // Start is called before the first frame update
     void Start()
     {
-       m_weapon = GetComponent<CharacterMultipleHandleWeapon>(); 
        // based on the current power level of the red tower, update all weapons' damage
        m_towerGameDefinitions.RedPowerLevel.Subscribe(UpdateWeapons);
     }
 
-    private void UpdateWeapons(float amount)
+    private void UpdateWeapons(float powerLevel)
     {
-         // get the current weapon's projectile data
-         
-          //weapon.CurrentWeapon += amount * 10;
-         // m_weapon.CurrentWeapon.
-          //    GetComponent<MMSimpleObjectPooler>().
-           //   gameObject.GetComponent<Projectile>().
-            //  GetComponent<DamageOnTouch>().MinDamageCaused
-             // += amount * 10;
+        GameParameters parameters = m_parameters.Parameters;
+        m_rifleProjectile.MinDamageCaused = Mathf.Lerp(parameters.RifleDamageMin, parameters.RifleDamageMax, powerLevel);
+        m_rifleProjectile.MaxDamageCaused = Mathf.Lerp(parameters.RifleDamageMin, parameters.RifleDamageMax, powerLevel);
+
+        Debug.Log($"Red Power Level set to {powerLevel}. Setting min rifle damage to {m_rifleProjectile.MinDamageCaused} and max to {m_rifleProjectile.MaxDamageCaused }");
     }
 }

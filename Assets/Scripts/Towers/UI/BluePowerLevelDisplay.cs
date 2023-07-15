@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class PowerLevelDisplay : MonoBehaviour
+public class BluePowerLevelDisplay : MonoBehaviour
 {
     [SerializeField]
     private TextMeshProUGUI m_text;
