@@ -47,6 +47,8 @@ public class WaveManager : MonoBehaviour
     private string m_filePath = "Waves.json";
     [SerializeField]
     private PoolID[] m_objectPools;
+    [SerializeField]
+    private AllWaves m_fallbackWaves;
 
     //TEMP
     [SerializeField]
@@ -63,13 +65,24 @@ public class WaveManager : MonoBehaviour
 
     public bool WaveRunning => CurrentWave.Value != null;
 
+    private string FilePath => $"{Application.persistentDataPath}/{m_filePath}";
+
     private void Awake()
     {
-        string fileContents = File.ReadAllText($"{Application.persistentDataPath}/{m_filePath}");
+        if (File.Exists(FilePath))
+        {
+            string fileContents = File.ReadAllText(FilePath);
 
-        m_waves = JsonUtility.FromJson<AllWaves>(fileContents);
+            m_waves = JsonUtility.FromJson<AllWaves>(fileContents);
 
-        Debug.Log($"Loaded waves from {Application.persistentDataPath}/{m_filePath}");
+            Debug.Log($"Loaded waves from {Application.persistentDataPath}/{m_filePath}");
+        }
+        else
+        {
+            m_waves = m_fallbackWaves;
+
+            Debug.Log("Loaded waves from fallback");
+        }
     }
 
     private void Update()

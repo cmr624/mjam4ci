@@ -20,9 +20,9 @@ RenderSettings:
   m_FogDensity: 0.005
   m_LinearFogStart: 0
   m_LinearFogEnd: 250
-  m_AmbientSkyColor: {r: 0.1544118, g: 0.1544118, b: 0.1544118, a: 1}
-  m_AmbientEquatorColor: {r: 0.3455882, g: 0.20206045, b: 0.04828071, a: 1}
-  m_AmbientGroundColor: {r: 0.5, g: 0.3480393, b: 0.04411766, a: 1}
+  m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
+  m_AmbientEquatorColor: {r: 0.8773585, g: 0.8773585, b: 0.8773585, a: 1}
+  m_AmbientGroundColor: {r: 0.5566038, g: 0.5566038, b: 0.5566038, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 1
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
@@ -627,37 +627,6 @@ MonoBehaviour:
   m_playerTransform: {fileID: 6799108551260582393}
   m_errorText: {fileID: 8065027761102954853}
   m_towerParent: {fileID: 734411692}
---- !u!1 &527464278
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 527464279}
-  m_Layer: 0
-  m_Name: Towers
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &527464279
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 527464278}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1591467263}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &598334956
 GameObject:
   m_ObjectHideFlags: 0
@@ -1707,6 +1676,52 @@ MonoBehaviour:
     Pool: {fileID: 990303904}
   - ID: Shoot
     Pool: {fileID: 601359535}
+  m_fallbackWaves:
+    Waves:
+    - Name: Test Wave 1
+      Description: 
+      Enemies:
+      - ID: Seek
+        Time: 0
+        Position: {x: 10, y: 0, z: 10}
+        RepeatTime: 0.1
+        RepeatNumber: 5
+    - Name: Test Wave 2
+      Description: 
+      Enemies:
+      - ID: Tower
+        Time: 0
+        Position: {x: 0, y: 0, z: 0}
+        RepeatTime: 1
+        RepeatNumber: 4
+      - ID: Shoot
+        Time: 5
+        Position: {x: 0, y: 3, z: 0}
+        RepeatTime: 0.5
+        RepeatNumber: 1
+      - ID: Seek
+        Time: 12
+        Position: {x: 0, y: 0, z: 0}
+        RepeatTime: 3.5
+        RepeatNumber: 5
+    - Name: Test Wave 3
+      Description: 
+      Enemies:
+      - ID: Tower
+        Time: 0
+        Position: {x: 0, y: 0, z: 0}
+        RepeatTime: 1
+        RepeatNumber: 100
+      - ID: Shoot
+        Time: 5
+        Position: {x: 0, y: 3, z: 0}
+        RepeatTime: 0.5
+        RepeatNumber: 1
+      - ID: Seek
+        Time: 12
+        Position: {x: 0, y: 0, z: 0}
+        RepeatTime: 3.5
+        RepeatNumber: 5
   m_startNextWaveKey: 13
 --- !u!1 &1210776601
 GameObject:
@@ -1755,6 +1770,8 @@ MonoBehaviour:
   m_filePath: Parameters.json
   m_loadKey: 282
   m_saveKey: 283
+  m_fallbackParameters:
+    StartingResource: 100
 --- !u!1 &1291175414
 GameObject:
   m_ObjectHideFlags: 0
@@ -1911,7 +1928,7 @@ MonoBehaviour:
   NestUnderThis: 0
   GameObjectToPool: {fileID: 3528675239006371990, guid: 3bef371377105468c8ebe8a6c8f237ad,
     type: 3}
-  PoolSize: 20
+  PoolSize: 100
   PoolCanExpand: 1
 --- !u!4 &1515912989
 Transform:
@@ -1972,38 +1989,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca8cf3e1074ca154ab3f66f9052e92be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1591467262
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1591467263}
-  m_Layer: 0
-  m_Name: Testing
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &1591467263
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1591467262}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4862.055, y: 1042.526, z: 104.40211}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 527464279}
-  m_Father: {fileID: 0}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1618121291
 GameObject:
   m_ObjectHideFlags: 0

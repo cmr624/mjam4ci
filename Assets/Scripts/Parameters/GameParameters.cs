@@ -1,6 +1,8 @@
+using System;
 using System.IO;
 using UnityEngine;
 
+[Serializable]
 public class Parameters
 {
     public float StartingResource;
@@ -15,8 +17,12 @@ public class GameParameters : MonoBehaviour
     private KeyCode m_loadKey = KeyCode.F1;
     [SerializeField]
     private KeyCode m_saveKey = KeyCode.F2;
+    [SerializeField]
+    private Parameters m_fallbackParameters;
 
     public Topic<Parameters> Parameters { get; } = new Topic<Parameters>(new Parameters());
+
+    private string FilePath => $"{Application.persistentDataPath}/{m_filePath}";
 
     private void Update()
     {
@@ -42,10 +48,19 @@ public class GameParameters : MonoBehaviour
 
     public void Load()
     {
-        string fileContents = File.ReadAllText($"{Application.persistentDataPath}/{m_filePath}");
+        if (File.Exists(FilePath))
+        {
+            string fileContents = File.ReadAllText(FilePath);
 
-        Parameters.Value = JsonUtility.FromJson<Parameters>(fileContents);
+            Parameters.Value = JsonUtility.FromJson<Parameters>(fileContents);
 
-        Debug.Log($"Loaded parameters from {Application.persistentDataPath}/{m_filePath}");
+            Debug.Log($"Loaded parameters from {FilePath}");
+        }
+        else
+        {
+            Parameters.Value = m_fallbackParameters;
+
+            Debug.Log($"Loaded parameters from fallback");
+        }
     }
 }
