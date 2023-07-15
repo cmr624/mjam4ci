@@ -2,13 +2,21 @@ using System;
 using System.IO;
 using UnityEngine;
 
+
 [Serializable]
-public class Parameters
+public class GameParameters
 {
+    //Player
     public float StartingResource;
+
+    //Towers
+    public float AnyTowerMinDistance;
+    public float GreenTowerMinDistance;
+    public float GreenTowerHealRadius;
+    public int BlueGroupMaxTowers;
 }
 
-public class GameParameters : MonoBehaviour
+public class GameParametersLoader : MonoBehaviour
 {
     [Tooltip("Relative to the persistent data path")]
     [SerializeField]
@@ -18,9 +26,9 @@ public class GameParameters : MonoBehaviour
     [SerializeField]
     private KeyCode m_saveKey = KeyCode.F2;
     [SerializeField]
-    private Parameters m_fallbackParameters;
+    private GameParameters m_fallbackParameters;
 
-    public Topic<Parameters> Parameters { get; } = new Topic<Parameters>(new Parameters());
+    public GameParameters Parameters { get; private set; } = new GameParameters();
 
     private string FilePath => $"{Application.persistentDataPath}/{m_filePath}";
 
@@ -39,7 +47,7 @@ public class GameParameters : MonoBehaviour
 
     public void Save()
     {
-        string parameters = JsonUtility.ToJson(Parameters.Value);
+        string parameters = JsonUtility.ToJson(Parameters);
 
         File.WriteAllText($"{Application.persistentDataPath}/{m_filePath}", parameters);
 
@@ -52,13 +60,13 @@ public class GameParameters : MonoBehaviour
         {
             string fileContents = File.ReadAllText(FilePath);
 
-            Parameters.Value = JsonUtility.FromJson<Parameters>(fileContents);
+            Parameters = JsonUtility.FromJson<GameParameters>(fileContents);
 
             Debug.Log($"Loaded parameters from {FilePath}");
         }
         else
         {
-            Parameters.Value = m_fallbackParameters;
+            Parameters = m_fallbackParameters;
 
             Debug.Log($"Loaded parameters from fallback");
         }

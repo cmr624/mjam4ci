@@ -13,6 +13,7 @@ public class EnemySpawnInfo
 {
     public string ID;
     public float Time;
+    public string SpawnPointName;
     public Vector3 Position;
     public float RepeatTime;
     public int RepeatNumber;
@@ -42,11 +43,20 @@ public class WaveManager : MonoBehaviour
         public MMObjectPooler Pool;
     }
 
+    [Serializable]
+    private class SpawnPoint
+    {
+        public string Name;
+        public Vector3 Position;
+    }
+
     [Tooltip("Relative to the persistent data path")]
     [SerializeField]
     private string m_filePath = "Waves.json";
     [SerializeField]
     private PoolID[] m_objectPools;
+    [SerializeField]
+    private SpawnPoint[] m_spawnPoints;
     [SerializeField]
     private AllWaves m_fallbackWaves;
 
@@ -187,10 +197,19 @@ public class WaveManager : MonoBehaviour
 
             for (int i = 0; i < info.RepeatNumber; i++)
             {
+                //Set position to pre-defined spawn point if one is specified
+                Vector3 pos = info.Position;
+                SpawnPoint spawnPoint = m_spawnPoints.FirstOrDefault(sp => sp.Name == info.SpawnPointName);
+
+                if(string.IsNullOrEmpty(info.SpawnPointName) == false && spawnPoint != null)
+                {
+                    pos = spawnPoint.Position;
+                }
+
                 expandedList.Add(new EnemySpawnInfo()
                 {
                     ID = info.ID,
-                    Position = info.Position,
+                    Position = pos,
                     Time = info.Time + info.RepeatTime * i
                 });
             }

@@ -15,6 +15,7 @@ public class TowerGameDefinitions : MonoBehaviour
         //Add new tower types here and add in inspector
     }
 
+    //EW 15-07-23: Move to game parameters for easier adjustment?
     [Serializable]
     public struct TowerDefintion 
     {
@@ -43,7 +44,7 @@ public class TowerGameDefinitions : MonoBehaviour
 
     public TowerLedger Ledger { get; private set; }
 
-    private void Awake()
+    public void Create(GameParameters parameters)
     {
         Ledger = new TowerLedger();
 
@@ -51,7 +52,7 @@ public class TowerGameDefinitions : MonoBehaviour
         {
             PlacementRules = new ITowerPlacementRule[]
             {
-                //new TPRMinimumDistance(minDistance: 5f), <- this rule only considers towers in its own group. See below for rule that considers all towers
+                new TPRMinimumDistance(minDistance: parameters.GreenTowerMinDistance) //, <- this rule only considers towers in its own group. See below for rule that considers all towers
                 //Add placement rules here
             },
         };
@@ -75,12 +76,12 @@ public class TowerGameDefinitions : MonoBehaviour
         {
             PlacementRules = new ITowerPlacementRule[]
             {
-                //new TPRMinimumDistance(minDistance: 20f),
+                new TPRTowerLimit(parameters.BlueGroupMaxTowers),
                 //Add placement rules here
             },
         };
 
-        IPowerLevelCalculator blueGroupPowerLevelCalculator = new PLCMaxTowers(10);
+        IPowerLevelCalculator blueGroupPowerLevelCalculator = new PLCMaxTowers(parameters.BlueGroupMaxTowers);
         BlueGroup.Towers.Subscribe(towers =>
         {
             BluePowerLevel.Value = blueGroupPowerLevelCalculator.CalculatePowerLevel(towers);
@@ -94,7 +95,7 @@ public class TowerGameDefinitions : MonoBehaviour
         };
 
         //Rule to enforce towers are all min distance apart from eachother.
-        ITowerPlacementRule minDistRule = new TPRMinimumDistanceFromGroups(minDistance: 10f, groups);
+        ITowerPlacementRule minDistRule = new TPRMinimumDistanceFromGroups(minDistance: parameters.AnyTowerMinDistance, groups);
 
         RedGroup.PlacementRules = RedGroup.PlacementRules.Append(minDistRule);
         GreenGroup.PlacementRules = GreenGroup.PlacementRules.Append(minDistRule);

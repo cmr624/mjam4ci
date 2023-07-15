@@ -14,7 +14,7 @@ public class PowerLevelDisplay : MonoBehaviour
 
     private void Start()
     {
-        m_towerGameDefinitions.RedPowerLevel.Subscribe(UpdateText);
+        m_towerGameDefinitions.BluePowerLevel.Subscribe(UpdateText);
     }
 
     private void UpdateText(float amount)
