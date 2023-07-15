@@ -5199,7 +5199,6 @@ GameObject:
   - component: {fileID: 3235098303205445814}
   - component: {fileID: 3275149207966047126}
   - component: {fileID: 3296434154950403922}
-  - component: {fileID: 3278106624314660668}
   - component: {fileID: 3277711920529062556}
   m_Layer: 0
   m_Name: GrenadeLauncher
@@ -5243,9 +5242,9 @@ MonoBehaviour:
   TriggerMode: 0
   DelayBeforeUse: 0
   DelayBeforeUseReleaseInterruption: 1
-  TimeBetweenUses: 0.1
+  TimeBetweenUses: 2
   TimeBetweenUsesReleaseInterruption: 1
-  UseBurstMode: 0
+  UseBurstMode: 1
   BurstLength: 3
   BurstTimeBetweenShots: 0.1
   MagazineBased: 0
@@ -5270,8 +5269,7 @@ MonoBehaviour:
   PreventAllMovementWhileInUse: 0
   PreventAllAimWhileInUse: 0
   RecoilForce: 0
-  Animators:
-  - {fileID: 3296434154950403922}
+  Animators: []
   PerformAnimatorSanityChecks: 0
   MirrorCharacterAnimatorParameters: 0
   WeaponAnimationID: 0
@@ -5297,15 +5295,15 @@ MonoBehaviour:
   InitializeOnStart: 1
   Interruptable: 0
   Flipped: 0
-  ProjectileSpawnOffset: {x: 0, y: 0.16, z: 0.57}
+  ProjectileSpawnOffset: {x: 0, y: 0.16, z: 0}
   DefaultProjectileDirection: {x: 0, y: 0, z: 1}
   ProjectilesPerShot: 1
   SpawnTransforms: []
-  SpawnTransformsMode: 1
-  Spread: {x: 5, y: 5, z: 5}
+  SpawnTransformsMode: 0
+  Spread: {x: 0, y: 0, z: 0}
   RotateWeaponOnSpread: 0
-  RandomSpread: 1
-  SpawnPosition: {x: 3.7978125, y: -0.33999953, z: 2.7627807}
+  RandomSpread: 0
+  SpawnPosition: {x: 3.7978125, y: -0.33999953, z: 2.1927807}
   ObjectPooler: {fileID: 0}
   SpawnFeedbacks: []
   TestShootButton: 0
@@ -5329,44 +5327,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &3278106624314660668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3237390587646656480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0514d297deadac74fb15a7b7326ff0d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AimControl: 3
-  RotationMode: 0
-  WeaponRotationSpeed: 10
-  MinimumAngle: -180
-  MaximumAngle: 180
-  MinimumMagnitude: 0.2
-  ReticleType: 2
-  Reticle: {fileID: 1373789777524232, guid: 65207112181da7b41bee2bb13af8b883, type: 3}
-  ReticleDistance: 0
-  ReticleHeight: 0
-  ReticleAtMousePosition: 1
-  RotateReticle: 1
-  ReplaceMousePointer: 1
-  MouseDeadZoneRadius: 2.5
-  DisplayReticle: 1
-  MoveCameraTargetTowardsReticle: 1
-  CameraTargetOffset: 0.3
-  CameraTargetMaxDistance: 5
-  CameraTargetSpeed: 5
-  Unrestricted3DAim: 0
-  ReticleMovesWithSlopes: 0
-  ReticleObstacleMask:
-    serializedVersion: 2
-    m_Bits: 0
-  MaximumSlopeElevation: 50
-  AvoidNullAim: 1
 --- !u!114 &3277711920529062556
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5382,7 +5342,7 @@ MonoBehaviour:
   MutualizeWaitingPools: 1
   NestWaitingPool: 1
   NestUnderThis: 0
-  GameObjectToPool: {fileID: 2490828765139917220, guid: 24fea70e93cc1944cb05d1a2bfcbd743,
+  GameObjectToPool: {fileID: 9167260752855061131, guid: 74c23ff45b92441909bee22b4e355bee,
     type: 3}
   PoolSize: 20
   PoolCanExpand: 1
