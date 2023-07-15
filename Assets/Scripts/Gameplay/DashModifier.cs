@@ -3,33 +3,30 @@ using System.Collections.Generic;
 using MoreMountains.TopDownEngine;
 using UnityEngine;
 
+[RequireComponent(typeof(CharacterDash3D))]
 public class DashModifier : MonoBehaviour
 {
     [SerializeField]
     private TowerGameDefinitions m_towerGameDefinitions;
+    [SerializeField]
+    private GameParametersLoader m_parameters;
     
-    // get dash ability
     private CharacterDash3D m_dashAbility;
-    // Start is called before the first frame update
+
     void Start()
     {
         m_dashAbility = GetComponent<CharacterDash3D>();
+        
         // based on the blue power level in tower game definitions, update the dash ability speed 
-        m_towerGameDefinitions.GetGroup(TowerGameDefinitions.TowerGroupColour.Blue).PowerLevel.Subscribe(UpdateDash);
+        m_towerGameDefinitions.BluePowerLevel.Subscribe(UpdateDash);
     }
 
-    // Update is called once per frame
-    private void UpdateDash(float amount)
+    private void UpdateDash(float powerLevel)
     {
-       // modify speed and distance of dash ability by amount
-       if (m_dashAbility.DashDuration > 0.1f)
-       {
-           m_dashAbility.DashDuration -= amount / 10;
-       }
+        GameParameters parameters = m_parameters.Parameters;
+        m_dashAbility.DashDuration = Mathf.Lerp(parameters.DashTimeMin, parameters.DashTimeMax, powerLevel);
+        m_dashAbility.DashDistance = Mathf.Lerp(parameters.DashDistanceMin, parameters.DashDistanceMax, powerLevel);
 
-       if (m_dashAbility.DashDistance < 16)
-       {
-           m_dashAbility.DashDistance += amount * 3;
-       }
+        Debug.Log($"Blue Power Level set to {powerLevel}. Setting dash duration to {m_dashAbility.DashDuration} and distance to {m_dashAbility.DashDistance}");
     }
 }

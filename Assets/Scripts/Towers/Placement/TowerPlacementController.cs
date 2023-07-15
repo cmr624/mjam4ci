@@ -33,11 +33,8 @@ public class TowerPlacementController : MonoBehaviour
     {
         m_errorText.ClearText();
 
-        //Get the kind of tower to make
-        TowerGameDefinitions.TowerDefintion towerDef = m_towerDefinitions.GetType(m_towerType);
-
         //Init the tower object
-        Tower tower = new Tower(towerDef.Stats);
+        Tower tower = m_towerDefinitions.CreateTower(m_towerType);
         tower.Position.Value = m_playerTransform.position;
 
         //Get the group
@@ -51,11 +48,7 @@ public class TowerPlacementController : MonoBehaviour
         if (result.Success)
         {
             //If the ading was successful, create visuals for the tower
-            TowerVisuals towerVisuals = Instantiate(towerDef.Visuals, m_towerParent);
-            towerVisuals.SetUp(tower);
-
-            //Add the tower, visuals and group to the ledger
-            m_towerDefinitions.Ledger.AddTower(tower, towerVisuals, group);
+            m_towerDefinitions.CreateTowerVisuals(m_towerType, tower);
         }
         else
         {
@@ -64,7 +57,7 @@ public class TowerPlacementController : MonoBehaviour
     }
 
     /*
-     * TODO: instead of shittong out towers where the mech is, we could place them with the mouse
+     * TODO: instead of shitting out towers where the mech is, we could place them with the mouse
      * if we have time to implement such a controller.
     private bool m_inPlaceMode;
 

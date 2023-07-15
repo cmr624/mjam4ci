@@ -1,27 +1,19 @@
 using System;
-using MoreMountains.TopDownEngine;
 using UnityEngine;
 
 namespace Towers
 {
-    [Serializable]
-    public class TowerStats
-    {
-        public float MaxHealth;
-        public int Cost;
-    }
-
     public class Tower 
     {
-        public int Cost { get; }
+        public int Cost { get; set; }
+        public float MaxHealth { get; set; }
         public Topic<Vector3> Position { get; } = new Topic<Vector3>();
 
         public Action OnDestroyed;
-        
-        public Tower(TowerStats data)
-        {
-            Cost = data.Cost;
 
+        public void Destroy()
+        {
+            OnDestroyed?.Invoke();
         }
 
         public override string ToString()

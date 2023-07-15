@@ -13,9 +13,10 @@ public class EnemySpawnInfo
 {
     public string ID;
     public float Time;
+    public string SpawnPointName;
     public Vector3 Position;
     public float RepeatTime;
-    public int RepeatNumber;
+    public int NumberToSpawn;
 }
 
 [Serializable]
@@ -42,17 +43,28 @@ public class WaveManager : MonoBehaviour
         public MMObjectPooler Pool;
     }
 
+    [Serializable]
+    private class SpawnPoint
+    {
+        public string Name;
+        public Vector3 Position;
+    }
+
     [Tooltip("Relative to the persistent data path")]
     [SerializeField]
     private string m_filePath = "Waves.json";
     [SerializeField]
     private PoolID[] m_objectPools;
     [SerializeField]
+    private SpawnPoint[] m_spawnPoints;
+    [SerializeField]
     private AllWaves m_fallbackWaves;
 
     //TEMP
     [SerializeField]
     private KeyCode m_startNextWaveKey;
+    [SerializeField]
+    private KeyCode m_endWaveKey = KeyCode.F3;
     //end TEMP
 
     private int m_currentWave;
@@ -60,7 +72,7 @@ public class WaveManager : MonoBehaviour
     private Coroutine m_waveCoroutine;
 
     public Topic<Wave> CurrentWave { get; } = new Topic<Wave>();
-    public Topic<List<EnemySpawnInfo>> ToSpawn { get; } = new Topic<List<EnemySpawnInfo>>();
+    public Topic<List<EnemySpawnInfo>> ToSpawn { get; } = new Topic<List<EnemySpawnInfo>>(new List<EnemySpawnInfo>());
     public Topic<List<Health>> EnemiesRemaining { get; } = new Topic<List<Health>>(new List<Health>());
 
     public bool WaveRunning => CurrentWave.Value != null;
@@ -91,6 +103,11 @@ public class WaveManager : MonoBehaviour
         {
             StartNextWave();
         }
+
+        if (Input.GetKeyDown(m_endWaveKey))
+        {
+            EndWave();
+        }
     }
 
     public void StartNextWave()
@@ -103,12 +120,6 @@ public class WaveManager : MonoBehaviour
 
     public bool StartWave(int index)
     {
-        if(WaveRunning)
-        {
-            Debug.LogError($"Cannot start wave while a wave is already running");
-            return false;
-        }
-
         if(m_waves.Waves.Length <= index)
         {
             Debug.LogError($"Cannot start wave {index} as there is only data for {m_waves.Waves.Length} waves");
@@ -119,10 +130,27 @@ public class WaveManager : MonoBehaviour
         return true;
     }
 
+    public void EndWave()
+    {
+        if(WaveRunning == false)
+        {
+            return;
+        }
+
+        ToSpawn.Value.Clear();
+        ToSpawn.Refresh();
+
+        IEnumerable<Health> enemies = new List<Health>(EnemiesRemaining.Value);
+
+        foreach(Health enemy in enemies)
+        {
+            enemy.Kill();
+        }
+    }
+
     private IEnumerator SpawnWave(Wave wave)
     {
         CurrentWave.Value = wave;
-        Debug.Log($"Starting Wave {wave}");
 
         float time = 0f;
         ToSpawn.Value = ProcessEnemyInfos(wave.Enemies);
@@ -183,14 +211,21 @@ public class WaveManager : MonoBehaviour
 
         foreach (EnemySpawnInfo info in enemyInfos)
         {
-            expandedList.Add(info);
-
-            for (int i = 0; i < info.RepeatNumber; i++)
+            for (int i = 0; i < info.NumberToSpawn; i++)
             {
+                //Set position to pre-defined spawn point if one is specified
+                Vector3 pos = info.Position;
+                SpawnPoint spawnPoint = m_spawnPoints.FirstOrDefault(sp => sp.Name == info.SpawnPointName);
+
+                if(string.IsNullOrEmpty(info.SpawnPointName) == false && spawnPoint != null)
+                {
+                    pos = spawnPoint.Position;
+                }
+
                 expandedList.Add(new EnemySpawnInfo()
                 {
                     ID = info.ID,
-                    Position = info.Position,
+                    Position = pos,
                     Time = info.Time + info.RepeatTime * i
                 });
             }
