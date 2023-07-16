@@ -19,7 +19,8 @@ namespace Towers
         {
             tower.Position.Subscribe(SetPosition);
             m_health.MaximumHealth = tower.MaxHealth;
-
+            m_health.CurrentHealth = tower.MaxHealth;
+            
             m_health.OnDeath += () =>
             {
                 tower.Destroy();

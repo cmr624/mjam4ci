@@ -32,8 +32,8 @@ public class GameParameters
     [Header("Blue Tower")]
     public TowerStats BlueTower;
     public int BlueGroupMaxTowers;
-    //public float DashCoolDownMin;
-    //public float DashCoolDownMax;
+    public float DashCoolDownMin;
+    public float DashCoolDownMax;
     public float DashDistanceMin;
     public float DashDistanceMax;
     public float DashTimeMin;

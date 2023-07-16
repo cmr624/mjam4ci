@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 4937899351878067977}
   - component: {fileID: 2558787959556094516}
   - component: {fileID: 3320197720806596752}
+  - component: {fileID: -7487562481503527882}
   m_Layer: 11
   m_Name: BlueTower
   m_TagString: Untagged
@@ -146,7 +147,7 @@ MonoBehaviour:
   Model: {fileID: 4070672852885240577}
   CurrentHealth: 0
   Invulnerable: 0
-  InitialHealth: 100
+  InitialHealth: 5
   MaximumHealth: 100
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
@@ -352,6 +353,19 @@ MonoBehaviour:
   DisplayDurationOnHit: 1
   HideBarAtZero: 1
   HideBarAtZeroDelay: 1
+--- !u!65 &-7487562481503527882
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4070672852242997901}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2, y: 1, z: 2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4070672852493313908
 GameObject:
   m_ObjectHideFlags: 0

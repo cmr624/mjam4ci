@@ -2329,12 +2329,18 @@ MonoBehaviour:
     - Name: Test Wave 1
       Description: 
       Enemies:
-      - ID: Seek
+      - ID: Tower
         Time: 0
         SpawnPointName: North
         Position: {x: 10, y: 0, z: 10}
         RepeatTime: 0.1
-        NumberToSpawn: 5
+        NumberToSpawn: 50
+      - ID: Tower
+        Time: 0
+        SpawnPointName: South
+        Position: {x: 10, y: 0, z: 10}
+        RepeatTime: 0.1
+        NumberToSpawn: 50
     - Name: Test Wave 2
       Description: 
       Enemies:
@@ -2378,6 +2384,7 @@ MonoBehaviour:
         RepeatTime: 3.5
         NumberToSpawn: 9
   m_startNextWaveKey: 13
+  m_endWaveKey: 284
 --- !u!1 &822527955
 GameObject:
   m_ObjectHideFlags: 0
@@ -3682,22 +3689,24 @@ MonoBehaviour:
     StartingResource: 100
     AnyTowerMinDistance: 5
     RedTower:
-      MaxHealth: 10
+      MaxHealth: 100
       Cost: 10
     RedGroupMaxTowers: 3
     RifleDamageMin: 10
     RifleDamageMax: 50
     GreenTower:
-      MaxHealth: 10
+      MaxHealth: 100
       Cost: 10
     GreenTowerMinDistance: 7
     GreenTowerHealRadius: 5
     GreenTowerTimeBetweenHealing: 1
     GreenTowerHealAmount: 5
     BlueTower:
-      MaxHealth: 5
+      MaxHealth: 50
       Cost: 5
     BlueGroupMaxTowers: 5
+    DashCoolDownMin: 1
+    DashCoolDownMax: 10
     DashDistanceMin: 2
     DashDistanceMax: 10
     DashTimeMin: 1
@@ -5633,41 +5642,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 262552164155557714, guid: 8af8f2d82c6a3443e9d3ba2270ac7862,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 262552164155557714, guid: 8af8f2d82c6a3443e9d3ba2270ac7862,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 262552164155557714, guid: 8af8f2d82c6a3443e9d3ba2270ac7862,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 262552164155557714, guid: 8af8f2d82c6a3443e9d3ba2270ac7862,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 262552164155557714, guid: 8af8f2d82c6a3443e9d3ba2270ac7862,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2981408784866126381, guid: 8af8f2d82c6a3443e9d3ba2270ac7862,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4009399229837370455, guid: 8af8f2d82c6a3443e9d3ba2270ac7862,
-        type: 3}
-      propertyPath: m_towerGameDefinitions
-      value: 
-      objectReference: {fileID: 1688067675}
     - target: {fileID: 6721088437274288988, guid: 8af8f2d82c6a3443e9d3ba2270ac7862,
         type: 3}
       propertyPath: m_Name
@@ -5735,12 +5709,6 @@ PrefabInstance:
       objectReference: {fileID: 1210776603}
     - target: {fileID: 6731993339484969707, guid: 8af8f2d82c6a3443e9d3ba2270ac7862,
         type: 3}
-      propertyPath: m_rifleProjectile
-      value: 
-      objectReference: {fileID: 5323441200534057275, guid: 5b6978c6ee9594bd88d4d67858e55b1e,
-        type: 3}
-    - target: {fileID: 6731993339484969707, guid: 8af8f2d82c6a3443e9d3ba2270ac7862,
-        type: 3}
       propertyPath: m_towerGameDefinitions
       value: 
       objectReference: {fileID: 1688067675}
@@ -5754,8 +5722,7 @@ PrefabInstance:
       propertyPath: m_towerGameDefinitions
       value: 
       objectReference: {fileID: 1688067675}
-    m_RemovedComponents:
-    - {fileID: 4009399229837370455, guid: 8af8f2d82c6a3443e9d3ba2270ac7862, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8af8f2d82c6a3443e9d3ba2270ac7862, type: 3}
 --- !u!114 &6799108551260582392 stripped
 MonoBehaviour:

@@ -24,9 +24,11 @@ public class DashModifier : MonoBehaviour
     private void UpdateDash(float powerLevel)
     {
         GameParameters parameters = m_parameters.Parameters;
-        m_dashAbility.DashDuration = Mathf.Lerp(parameters.DashTimeMin, parameters.DashTimeMax, powerLevel);
-        m_dashAbility.DashDistance = Mathf.Lerp(parameters.DashDistanceMin, parameters.DashDistanceMax, powerLevel);
-
-        Debug.Log($"Blue Power Level set to {powerLevel}. Setting dash duration to {m_dashAbility.DashDuration} and distance to {m_dashAbility.DashDistance}");
+        //m_dashAbility.DashDuration = Mathf.Lerp(parameters.DashTimeMin, parameters.DashTimeMax, powerLevel);
+        //m_dashAbility.DashDistance = Mathf.Lerp(parameters.DashDistanceMin, parameters.DashDistanceMax, powerLevel);
+        m_dashAbility.Cooldown.RefillDuration = Mathf.Lerp(parameters.DashCoolDownMax, parameters.DashCoolDownMin, powerLevel);
+        //Debug.Log($"Blue Power Level set to {powerLevel}. Setting dash duration to {m_dashAbility.DashDuration} and distance to {m_dashAbility.DashDistance}");
+        Debug.Log(
+            $"Blue Power Level set to {powerLevel}. Setting dash refill duration to {m_dashAbility.Cooldown.RefillDuration}");
     }
 }

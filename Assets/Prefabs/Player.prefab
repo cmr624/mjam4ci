@@ -276,7 +276,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5128526594568301580}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.73, y: 0.726, z: 0.7049999}
+  m_LocalPosition: {x: -0.73, y: 0.5, z: 0.7049999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -298,7 +298,6 @@ GameObject:
   - component: {fileID: 6689119592757909632}
   - component: {fileID: 6689277497802758770}
   - component: {fileID: 6689187194709554504}
-  - component: {fileID: 6689927963272775306}
   - component: {fileID: 6690086247799332208}
   - component: {fileID: 6689328316677116686}
   - component: {fileID: 6690698205953729538}
@@ -307,7 +306,6 @@ GameObject:
   - component: {fileID: 8309444294261092819}
   - component: {fileID: 5563361321471179814}
   - component: {fileID: 8965201247456679315}
-  - component: {fileID: 4009399229837370455}
   - component: {fileID: 6731993339484969707}
   m_Layer: 10
   m_Name: Player
@@ -544,29 +542,6 @@ MonoBehaviour:
   TouchTheGroundParticles:
   - {fileID: 0}
   TouchTheGroundSfx: []
---- !u!114 &6689927963272775306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6721088437274288988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a87ffdd7d8febb24b817b1d3d350bef7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AbilityStartSfx: {fileID: 0}
-  AbilityInProgressSfx: {fileID: 0}
-  AbilityStopSfx: {fileID: 0}
-  AbilityStartFeedbacks: {fileID: 0}
-  AbilityStopFeedbacks: {fileID: 0}
-  AbilityPermitted: 1
-  BlockingMovementStates: 
-  BlockingConditionStates: 
-  BlockingWeaponStates: 
-  PreventJumpInButtonActivatedZone: 1
-  ButtonActivatedZone: {fileID: 0}
 --- !u!114 &6690086247799332208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -591,7 +566,7 @@ MonoBehaviour:
   DashMode: 1
   DashSpace: 0
   DashDirection: {x: 0, y: 0, z: 1}
-  DashDistance: 6
+  DashDistance: 12
   DashDuration: 0.5
   DashCurve:
     serializedVersion: 2
@@ -620,10 +595,10 @@ MonoBehaviour:
   AllowDashWhenJumping: 0
   Cooldown:
     Unlimited: 0
-    ConsumptionDuration: 2
-    PauseOnEmptyDuration: 1
-    RefillDuration: 1
-    CanInterruptRefill: 1
+    ConsumptionDuration: 0
+    PauseOnEmptyDuration: 0
+    RefillDuration: 0
+    CanInterruptRefill: 0
     CooldownState: 0
     CurrentDurationLeft: 0
   InvincibleWhileDashing: 1
@@ -875,19 +850,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_towerGameDefinitions: {fileID: 0}
---- !u!114 &4009399229837370455
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6721088437274288988}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 977047e3a2a1c44e6931fcfaab075303, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_towerGameDefinitions: {fileID: 0}
+  m_parameters: {fileID: 0}
 --- !u!114 &6731993339484969707
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -901,6 +864,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_towerGameDefinitions: {fileID: 0}
+  m_parameters: {fileID: 0}
+  m_rifleProjectile: {fileID: 5323441200534057275, guid: 5b6978c6ee9594bd88d4d67858e55b1e,
+    type: 3}
 --- !u!1 &6921487649125102996
 GameObject:
   m_ObjectHideFlags: 0
@@ -924,7 +890,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6921487649125102996}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.004, y: 1.047, z: 0.655}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

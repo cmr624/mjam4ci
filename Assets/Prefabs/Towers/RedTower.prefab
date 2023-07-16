@@ -140,10 +140,10 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4070672852242997901}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.3126767, y: 1, z: 1.3695267}
+  m_Size: {x: 2, y: 2, z: 1.3695267}
   m_Center: {x: 0.028425097, y: 0, z: -0.0071062446}
 --- !u!114 &-7379590042220163826
 MonoBehaviour:
@@ -458,6 +458,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4070672852885240582}
+  - component: {fileID: 3356838965109116427}
   m_Layer: 11
   m_Name: TempModel
   m_TagString: Untagged
@@ -482,3 +483,16 @@ Transform:
   m_Father: {fileID: 4070672852242997890}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -60, z: 0}
+--- !u!65 &3356838965109116427
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4070672852885240577}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}

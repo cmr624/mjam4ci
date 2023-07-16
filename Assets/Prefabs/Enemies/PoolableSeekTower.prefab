@@ -239,8 +239,8 @@ GameObject:
   - component: {fileID: 3528675239006371993}
   - component: {fileID: 3528675239006371992}
   - component: {fileID: 3528675239006371998}
-  - component: {fileID: 3528675239006371999}
   - component: {fileID: 3993252259258016607}
+  - component: {fileID: 5263083707998650574}
   m_Layer: 13
   m_Name: PoolableSeekTower
   m_TagString: Enemy
@@ -894,19 +894,6 @@ MonoBehaviour:
   AdditionalAbilityNodes: []
   CharacterBrain: {fileID: 0}
   OptimizeForMobile: 1
---- !u!65 &3528675239006371999
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3528675239006371990}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &3993252259258016607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -920,6 +907,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AmountOfResource: 1
+--- !u!65 &5263083707998650574
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3528675239006371990}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3734249748180554625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1143,6 +1143,7 @@ GameObject:
   - component: {fileID: 6613989677328439643}
   - component: {fileID: 6613989677328439646}
   - component: {fileID: 6613989677328439645}
+  - component: {fileID: 2960332987656077459}
   m_Layer: 13
   m_Name: Model
   m_TagString: Enemy
@@ -1215,3 +1216,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &2960332987656077459
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6613989677328439642}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
