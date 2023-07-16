@@ -531,7 +531,7 @@ MonoBehaviour:
   InputAuthorized: 1
   AnalogInput: 0
   ScriptDrivenInput: 0
-  WalkSpeed: 4
+  WalkSpeed: 5.5
   ShouldSetMovement: 1
   IdleThreshold: 0.05
   Acceleration: 10
@@ -566,7 +566,7 @@ MonoBehaviour:
   DashMode: 1
   DashSpace: 0
   DashDirection: {x: 0, y: 0, z: 1}
-  DashDistance: 12
+  DashDistance: 8
   DashDuration: 0.5
   DashCurve:
     serializedVersion: 2
