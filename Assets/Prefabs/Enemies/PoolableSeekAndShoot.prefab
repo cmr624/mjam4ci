@@ -239,10 +239,9 @@ GameObject:
   - component: {fileID: 3230195179457869026}
   - component: {fileID: 8563951447727492103}
   - component: {fileID: 8698395691657947099}
-  - component: {fileID: 4361367363420871494}
-  - component: {fileID: 3692406338146557311}
-  - component: {fileID: 4144470153353604120}
-  - component: {fileID: 8913287940116120483}
+  - component: {fileID: 1253883972538899093}
+  - component: {fileID: 8181020464572539708}
+  - component: {fileID: 1669600}
   m_Layer: 13
   m_Name: PoolableSeekAndShoot
   m_TagString: Enemy
@@ -893,36 +892,21 @@ MonoBehaviour:
       - {fileID: 8527670122962534324}
     Transitions:
       array:
-      - Decision: {fileID: 3692406338146557311}
-        TrueState: Seek
-        FalseState: 
-  - StateName: Seek
-    Actions:
-      array:
-      - {fileID: 8563951447727492103}
-    Transitions:
-      array:
-      - Decision: {fileID: 3230195179457869026}
-        TrueState: 
-        FalseState: MovingRandomly
-      - Decision: {fileID: 8913287940116120483}
+      - Decision: {fileID: 1253883972538899093}
         TrueState: Shoot
-        FalseState: 
+        FalseState: MovingRandomly
   - StateName: Shoot
     Actions:
       array:
       - {fileID: 8698395691657947099}
-      - {fileID: 4361367363420871494}
+      - {fileID: 1669600}
     Transitions:
       array:
-      - Decision: {fileID: 3230195179457869026}
-        TrueState: 
+      - Decision: {fileID: 8181020464572539708}
+        TrueState: Shoot
         FalseState: MovingRandomly
-      - Decision: {fileID: 8913287940116120483}
-        TrueState: 
-        FalseState: Seek
-      - Decision: {fileID: 3692406338146557311}
-        TrueState: 
+      - Decision: {fileID: 3230195179457869026}
+        TrueState: Shoot
         FalseState: MovingRandomly
   TimeInThisState: 0
   Target: {fileID: 0}
@@ -1004,7 +988,7 @@ MonoBehaviour:
   AimOrigin: 0
   ShootOffset: {x: 0, y: 0, z: 0}
   LockVerticalAim: 1
---- !u!114 &4361367363420871494
+--- !u!114 &1253883972538899093
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1013,72 +997,53 @@ MonoBehaviour:
   m_GameObject: {fileID: 181601789442075162}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5758bd960e1ca6d41828c58712425d60, type: 3}
+  m_Script: {fileID: 11500000, guid: 210ecb3d02181d244935dc0092d62a8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
+  Radius: 25
+  DetectionOriginOffset: {x: 0, y: 0, z: 0}
+  TargetLayerMask:
+    serializedVersion: 2
+    m_Bits: 3072
+  ObstacleMask:
+    serializedVersion: 2
+    m_Bits: 256
+  TargetCheckFrequency: 1
+  CanTargetSelf: 0
+  OverlapMaximum: 10
+--- !u!114 &8181020464572539708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181601789442075162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 500eec6de7da5b941b00fda076e758ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Label: 
+  ObstacleLayerMask:
+    serializedVersion: 2
+    m_Bits: 256
+  LineOfSightOffset: {x: 0, y: 0, z: 0}
+--- !u!114 &1669600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 181601789442075162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad888dc2bbe117441bde19ec878ff32c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   InitializationMode: 0
   Label: 
---- !u!114 &3692406338146557311
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 181601789442075162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a8321e473cf29849bf298b98b8f76d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Label: 
-  SetTargetToNullIfNoneIsFound: 1
-  TargetConeOfVision: {fileID: 4144470153353604120}
---- !u!114 &4144470153353604120
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 181601789442075162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fb9c8af0fcd0514e89d35554b6cae77, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ObstacleMask:
-    serializedVersion: 2
-    m_Bits: 256
-  VisionRadius: 25
-  VisionAngle: 360
-  Direction: {x: 0, y: 0, z: 0}
-  EulerAngles: {x: 0, y: 0, z: 0}
-  Offset: {x: 0, y: 1.25, z: 0}
-  ShouldScanForTargets: 1
-  TargetMask:
-    serializedVersion: 2
-    m_Bits: 3072
-  ScanFrequencyInSeconds: 0.5
-  VisibleTargets: []
-  ShouldDrawMesh: 1
-  MeshDensity: 0.2
-  EdgePrecision: 3
-  EdgeThreshold: 0.5
-  VisionMeshFilter: {fileID: 0}
---- !u!114 &8913287940116120483
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 181601789442075162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 206825d6db9c84741810b9da915cfb9c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Label: 
-  ComparisonMode: 1
-  Distance: 10
+  LockRotationX: 0
 --- !u!1 &1583100833097045717
 GameObject:
   m_ObjectHideFlags: 0
