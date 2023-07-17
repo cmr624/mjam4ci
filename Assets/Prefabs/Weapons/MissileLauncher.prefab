@@ -4967,7 +4967,7 @@ GameObject:
   - component: {fileID: 3296434154950403922}
   - component: {fileID: 3277711920529062556}
   m_Layer: 0
-  m_Name: GrenadeLauncher
+  m_Name: MissileLauncher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20566,7 +20566,7 @@ MonoBehaviour:
     Quantized: 0
     TargetBPM: 120
   DebugActive: 0
-  Sfx: {fileID: 8300000, guid: f79de2b80bfc68740b28914b652413bb, type: 3}
+  Sfx: {fileID: 8300000, guid: 27d3ab255f29e44c0ad10f497cbf09bb, type: 3}
   RandomSfx: []
   TestButton: 0
   TestStopButton: 0
