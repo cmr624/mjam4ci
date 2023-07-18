@@ -1982,7 +1982,7 @@ GameObject:
   - component: {fileID: 793201506}
   - component: {fileID: 793201505}
   - component: {fileID: 793201508}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2409,36 +2409,18 @@ MonoBehaviour:
     - Name: Test Wave 1
       Description: 
       Enemies:
-      - ID: Tower
+      - ID: Seek
+        Time: 0
+        SpawnPointName: South
+        Position: {x: 10, y: 0, z: 10}
+        RepeatTime: 0.1
+        NumberToSpawn: 10
+      - ID: Shoot
         Time: 0
         SpawnPointName: North
         Position: {x: 10, y: 0, z: 10}
         RepeatTime: 0.1
-        NumberToSpawn: 3
-      - ID: Tower
-        Time: 0
-        SpawnPointName: South
-        Position: {x: 10, y: 0, z: 10}
-        RepeatTime: 0.1
-        NumberToSpawn: 3
-      - ID: Seek
-        Time: 0
-        SpawnPointName: South
-        Position: {x: 10, y: 0, z: 10}
-        RepeatTime: 0.1
-        NumberToSpawn: 1
-      - ID: Seek
-        Time: 0
-        SpawnPointName: East
-        Position: {x: 10, y: 0, z: 10}
-        RepeatTime: 5
-        NumberToSpawn: 3
-      - ID: Shoot
-        Time: 0
-        SpawnPointName: West
-        Position: {x: 10, y: 0, z: 10}
-        RepeatTime: 0.1
-        NumberToSpawn: 1
+        NumberToSpawn: 10
     - Name: Test Wave 2
       Description: 
       Enemies:
@@ -4361,7 +4343,7 @@ GameObject:
   - component: {fileID: 1625081047}
   - component: {fileID: 1625081049}
   - component: {fileID: 1625081048}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BaseOutline
   m_TagString: Untagged
   m_Icon: {fileID: 0}

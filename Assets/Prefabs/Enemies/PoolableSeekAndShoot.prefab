@@ -816,8 +816,8 @@ MonoBehaviour:
     type: 3}
   CanPickupWeapons: 0
   WeaponUseFeedback: {fileID: 0}
-  WeaponAttachment: {fileID: 940578320244843291}
-  ProjectileSpawn: {fileID: 6186250215546047518}
+  WeaponAttachment: {fileID: 6206363657565249823}
+  ProjectileSpawn: {fileID: 992033888322527973}
   AutomaticallyBindAnimator: 1
   AmmoDisplayID: 0
   AutoIK: 0
@@ -1343,15 +1343,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5be6f6e712e28164096d81c602c5bd35, type: 3}
---- !u!4 &940578320244843291 stripped
+--- !u!4 &992033888322527973 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 7636150100864126756, guid: 5be6f6e712e28164096d81c602c5bd35,
+  m_CorrespondingSourceObject: {fileID: 7579836761869405914, guid: 5be6f6e712e28164096d81c602c5bd35,
     type: 3}
   m_PrefabInstance: {fileID: 7274603059579284543}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &6186250215546047518 stripped
+--- !u!4 &6206363657565249823 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3543608585428607009, guid: 5be6f6e712e28164096d81c602c5bd35,
+  m_CorrespondingSourceObject: {fileID: 3663108945601580320, guid: 5be6f6e712e28164096d81c602c5bd35,
     type: 3}
   m_PrefabInstance: {fileID: 7274603059579284543}
   m_PrefabAsset: {fileID: 0}
@@ -1400,3 +1400,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &5599877988590618609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7509186273299157358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dfa12a539b54b047bff01945b96dc4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_animator: {fileID: 4830793912899460595}
+  m_ability: {fileID: 1098432612555854190}
+  m_parameterName: Shooting
