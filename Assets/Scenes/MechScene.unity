@@ -5150,7 +5150,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_BoundingVolume
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1392788253}
     - target: {fileID: 257498510604846113, guid: 65cd9299482f640438b6b06d242ea3cf,
         type: 3}
       propertyPath: m_Lens.FieldOfView
