@@ -2414,7 +2414,13 @@ MonoBehaviour:
         SpawnPointName: South
         Position: {x: 10, y: 0, z: 10}
         RepeatTime: 0.1
-        NumberToSpawn: 1
+        NumberToSpawn: 10
+      - ID: Shoot
+        Time: 0
+        SpawnPointName: North
+        Position: {x: 10, y: 0, z: 10}
+        RepeatTime: 0.1
+        NumberToSpawn: 10
     - Name: Test Wave 2
       Description: 
       Enemies:
