@@ -44,7 +44,6 @@ GameObject:
   - component: {fileID: 114277323309942634}
   - component: {fileID: 95051391410759500}
   - component: {fileID: 114426053428167632}
-  - component: {fileID: 114599354629761864}
   - component: {fileID: 114591608567984394}
   m_Layer: 0
   m_Name: LoftAIAssaultRifleNoModel
@@ -211,29 +210,6 @@ MonoBehaviour:
     m_Bits: 0
   MaximumSlopeElevation: 50
   AvoidNullAim: 1
---- !u!114 &114599354629761864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1421979490917578}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03aaf62627f364a7d92d307729fe738d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Mode: 1
-  PerformRaycast: 1
-  DrawLaser: 1
-  RaycastOriginOffset: {x: 0, y: 0, z: 0}
-  LaserOriginOffset: {x: 0, y: 0.16, z: 0.57}
-  LaserMaxDistance: 50
-  LaserCollisionMask:
-    serializedVersion: 2
-    m_Bits: 1057536
-  LaserWidth: {x: 0.01, y: 0.01}
-  LaserMaterial: {fileID: 2100000, guid: 41fcf89824cad6c40a3efec451bb197f, type: 2}
 --- !u!114 &114591608567984394
 MonoBehaviour:
   m_ObjectHideFlags: 0
