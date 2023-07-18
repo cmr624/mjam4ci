@@ -33,11 +33,14 @@ public class TimedText : MonoBehaviour
             StopCoroutine(m_coroutine);
         }
 
-        m_text.text = text;
-
-        if(string.IsNullOrEmpty(text) == false)
+        if (enabled)
         {
-            m_coroutine = StartCoroutine(ClearTextAfter(time));
+            m_text.text = text;
+
+            if (string.IsNullOrEmpty(text) == false)
+            {
+                m_coroutine = StartCoroutine(ClearTextAfter(time));
+            }
         }
     }
 

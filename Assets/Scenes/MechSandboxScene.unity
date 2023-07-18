@@ -1916,7 +1916,7 @@ GameObject:
   - component: {fileID: 793201506}
   - component: {fileID: 793201505}
   - component: {fileID: 793201508}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2343,30 +2343,6 @@ MonoBehaviour:
     - Name: Test Wave 1
       Description: 
       Enemies:
-      - ID: Tower
-        Time: 0
-        SpawnPointName: North
-        Position: {x: 10, y: 0, z: 10}
-        RepeatTime: 0.1
-        NumberToSpawn: 3
-      - ID: Tower
-        Time: 0
-        SpawnPointName: South
-        Position: {x: 10, y: 0, z: 10}
-        RepeatTime: 0.1
-        NumberToSpawn: 3
-      - ID: Seek
-        Time: 0
-        SpawnPointName: South
-        Position: {x: 10, y: 0, z: 10}
-        RepeatTime: 0.1
-        NumberToSpawn: 1
-      - ID: Seek
-        Time: 0
-        SpawnPointName: East
-        Position: {x: 10, y: 0, z: 10}
-        RepeatTime: 5
-        NumberToSpawn: 3
       - ID: Shoot
         Time: 0
         SpawnPointName: West
@@ -4569,7 +4545,7 @@ GameObject:
   - component: {fileID: 1625081047}
   - component: {fileID: 1625081049}
   - component: {fileID: 1625081048}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BaseOutline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4641,6 +4617,75 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1625081046}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &1669604698
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 181601789442075162, guid: b94146aa8e9934b4bb175cc2c5e5367e,
+        type: 3}
+      propertyPath: m_Name
+      value: PoolableSeekAndShoot
+      objectReference: {fileID: 0}
+    - target: {fileID: 184774022662845944, guid: b94146aa8e9934b4bb175cc2c5e5367e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 184774022662845944, guid: b94146aa8e9934b4bb175cc2c5e5367e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.966591
+      objectReference: {fileID: 0}
+    - target: {fileID: 184774022662845944, guid: b94146aa8e9934b4bb175cc2c5e5367e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 184774022662845944, guid: b94146aa8e9934b4bb175cc2c5e5367e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 14.153635
+      objectReference: {fileID: 0}
+    - target: {fileID: 184774022662845944, guid: b94146aa8e9934b4bb175cc2c5e5367e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 184774022662845944, guid: b94146aa8e9934b4bb175cc2c5e5367e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 184774022662845944, guid: b94146aa8e9934b4bb175cc2c5e5367e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 184774022662845944, guid: b94146aa8e9934b4bb175cc2c5e5367e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 184774022662845944, guid: b94146aa8e9934b4bb175cc2c5e5367e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 184774022662845944, guid: b94146aa8e9934b4bb175cc2c5e5367e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 184774022662845944, guid: b94146aa8e9934b4bb175cc2c5e5367e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b94146aa8e9934b4bb175cc2c5e5367e, type: 3}
 --- !u!4 &1688067674 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7898197534467394155, guid: 6a9d2f322b42d6944a283e97b1a11629,
