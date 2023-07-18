@@ -1982,7 +1982,7 @@ GameObject:
   - component: {fileID: 793201506}
   - component: {fileID: 793201505}
   - component: {fileID: 793201508}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4361,7 +4361,7 @@ GameObject:
   - component: {fileID: 1625081047}
   - component: {fileID: 1625081049}
   - component: {fileID: 1625081048}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BaseOutline
   m_TagString: Untagged
   m_Icon: {fileID: 0}
