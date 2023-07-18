@@ -2409,33 +2409,9 @@ MonoBehaviour:
     - Name: Test Wave 1
       Description: 
       Enemies:
-      - ID: Tower
-        Time: 0
-        SpawnPointName: North
-        Position: {x: 10, y: 0, z: 10}
-        RepeatTime: 0.1
-        NumberToSpawn: 3
-      - ID: Tower
-        Time: 0
-        SpawnPointName: South
-        Position: {x: 10, y: 0, z: 10}
-        RepeatTime: 0.1
-        NumberToSpawn: 3
       - ID: Seek
         Time: 0
         SpawnPointName: South
-        Position: {x: 10, y: 0, z: 10}
-        RepeatTime: 0.1
-        NumberToSpawn: 1
-      - ID: Seek
-        Time: 0
-        SpawnPointName: East
-        Position: {x: 10, y: 0, z: 10}
-        RepeatTime: 5
-        NumberToSpawn: 3
-      - ID: Shoot
-        Time: 0
-        SpawnPointName: West
         Position: {x: 10, y: 0, z: 10}
         RepeatTime: 0.1
         NumberToSpawn: 1
