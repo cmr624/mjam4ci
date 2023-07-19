@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4563349099885527687}
   - component: {fileID: 4563349099885527686}
+  - component: {fileID: 896390335853568718}
   m_Layer: 0
   m_Name: SoundManager
   m_TagString: Untagged
@@ -24,7 +25,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4563349099885527681}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.7742858, y: 3.336374, z: 0.3587923}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -48,3 +49,16 @@ MonoBehaviour:
   settingsSo: {fileID: 11400000, guid: 07ea3ff88e1ecb84d91f58aa804badc6, type: 2}
   AudioSourcePoolSize: 10
   PoolCanExpand: 1
+--- !u!114 &896390335853568718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4563349099885527681}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b126b2f0f2341c481a0731563712b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _sfxMapFile: {fileID: 11400000, guid: aaa5974e1438440f8938a632700a7669, type: 2}

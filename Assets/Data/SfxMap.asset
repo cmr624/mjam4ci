@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6689bfe18f6744b728027cb546218de6, type: 3}
+  m_Name: SfxMap
+  m_EditorClassIdentifier: 
+  _keyValues:
+  - Action: 2LegWalk1
+    SFXClip: {fileID: 8300000, guid: 9eb2da2399d0949308c76925017ecfe3, type: 3}
+  - Action: 2LegWalk2
+    SFXClip: {fileID: 8300000, guid: cabd3977696684bc1ae6de12262654d2, type: 3}
