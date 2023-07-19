@@ -19849,7 +19849,7 @@ GameObject:
   - component: {fileID: 2824582284714622469}
   - component: {fileID: 5979806248954228976}
   m_Layer: 13
-  m_Name: PoolableFollow
+  m_Name: PoolableFollowExplode
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51205,6 +51205,27 @@ PrefabInstance:
       propertyPath: m_Name
       value: 4Legged_Mech_Edited
       objectReference: {fileID: 0}
+    - target: {fileID: 7603786706384944740, guid: 2d47aacbab2858f489e6ca0fee4f3c51,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -1550514412580984892, guid: 678b05458992047ddad6b68eccbb05e3,
+        type: 3}
+    - target: {fileID: 7603786706384944740, guid: 2d47aacbab2858f489e6ca0fee4f3c51,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc1cf1cd48a894c81a10834abe4706d5, type: 2}
+    - target: {fileID: 7603786706384944740, guid: 2d47aacbab2858f489e6ca0fee4f3c51,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc1cf1cd48a894c81a10834abe4706d5, type: 2}
+    - target: {fileID: 7603786706384944740, guid: 2d47aacbab2858f489e6ca0fee4f3c51,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: dc1cf1cd48a894c81a10834abe4706d5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d47aacbab2858f489e6ca0fee4f3c51, type: 3}
 --- !u!1 &7424558320358238868 stripped

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2d47aacbab2858f489e6ca0fee4f3c51
+guid: 7c7ef14aabade4f43934a4a6c64129bd
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
@@ -7,23 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: dc1cf1cd48a894c81a10834abe4706d5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.005
-    second: {fileID: 2100000, guid: dc1cf1cd48a894c81a10834abe4706d5, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.006
-    second: {fileID: 2100000, guid: dc1cf1cd48a894c81a10834abe4706d5, type: 2}
+      name: Material.011
+    second: {fileID: 2100000, guid: 83a1971f21fc34e0eb7a970ffb44d02c, type: 2}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
-      name: 4_Leg_Bake
-    second: {fileID: 2800000, guid: ced99233fa0a86144b0e441a4ca91d7a, type: 3}
+      name: Seeker_Bake_Redone
+    second: {fileID: 2800000, guid: 0903aba07b2664ee6bd944580f248999, type: 3}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -53,47 +43,18 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Armature|Explode
-      takeName: Armature|Explode
-      internalID: 7306156949693052103
-      firstFrame: 36
-      lastFrame: 60
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Armature|Icosphere.001Action
-      takeName: Armature|Icosphere.001Action
-      internalID: 8209292733014699952
+      name: Armature|Chase
+      takeName: Armature|Chase
+      internalID: -159675095357825413
       firstFrame: 0
-      lastFrame: 1
+      lastFrame: 26
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -111,9 +72,9 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: Armature|Idel
-      takeName: Armature|Idel
-      internalID: 2084305374003690623
+      name: Armature|iDLE
+      takeName: Armature|iDLE
+      internalID: 6508173165110587566
       firstFrame: 0
       lastFrame: 1
       wrapMode: 0
@@ -168,39 +129,10 @@ ModelImporter:
       maskType: 3
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
-    - serializedVersion: 16
-      name: Armature|Walk
-      takeName: Armature|Walk
-      internalID: 8349542763059015795
-      firstFrame: 0
-      lastFrame: 19
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.15
+    globalScale: 0.24
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -253,7 +185,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.15
+    globalScale: 0.0023999999
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

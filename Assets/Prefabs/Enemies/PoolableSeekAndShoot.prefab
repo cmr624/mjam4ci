@@ -1341,6 +1341,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: 2_legged_Deisel
       objectReference: {fileID: 0}
+    - target: {fileID: 2622315507144001795, guid: 5be6f6e712e28164096d81c602c5bd35,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 505f5a7e38dcc024899734f911d99751, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5be6f6e712e28164096d81c602c5bd35, type: 3}
 --- !u!4 &992033888322527973 stripped
