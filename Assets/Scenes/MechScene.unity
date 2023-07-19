@@ -1611,7 +1611,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &601359533
 GameObject:
@@ -2414,12 +2414,18 @@ MonoBehaviour:
         SpawnPointName: South
         Position: {x: 10, y: 0, z: 10}
         RepeatTime: 0.1
-        NumberToSpawn: 10
+        NumberToSpawn: 1
       - ID: Shoot
+        Time: 0
+        SpawnPointName: South
+        Position: {x: 10, y: 0, z: 10}
+        RepeatTime: 2
+        NumberToSpawn: 1
+      - ID: Tower
         Time: 0
         SpawnPointName: North
         Position: {x: 10, y: 0, z: 10}
-        RepeatTime: 0.1
+        RepeatTime: 2
         NumberToSpawn: 10
     - Name: Test Wave 2
       Description: 
@@ -5551,7 +5557,7 @@ PrefabInstance:
     - target: {fileID: 4563349099885527687, guid: f60bbf318c2d24da8a25fd077368ef5c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4563349099885527687, guid: f60bbf318c2d24da8a25fd077368ef5c,
         type: 3}
