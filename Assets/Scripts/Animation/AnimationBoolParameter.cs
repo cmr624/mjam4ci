@@ -12,10 +12,12 @@ public class AnimationBoolParameter : MonoBehaviour
     public void OnEnable()
     {
         m_animator.SetBool(m_parameterName, true);
+        Debug.Log("AnimationBoolParameter: Setting to true");
     }
 
     public void OnDisable()
     {
         m_animator.SetBool(m_parameterName, false);
+        Debug.Log("AnimationBoolParameter: Setting to false");
     }
 }

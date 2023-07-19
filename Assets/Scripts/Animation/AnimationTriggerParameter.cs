@@ -7,7 +7,7 @@ public class AnimationTriggerParameter : MonoBehaviour
     [SerializeField]
     private string m_parameterName;
 
-    public void OnEnable()
+    public void TriggerAnimation()
     {
         m_animator.SetTrigger(m_parameterName);
     }
