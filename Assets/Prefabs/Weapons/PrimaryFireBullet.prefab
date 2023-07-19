@@ -15252,11 +15252,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetLayerMask:
     serializedVersion: 2
-    m_Bits: 12032
+    m_Bits: 8960
   Owner: {fileID: 0}
   TriggerFilter: 195
-  MinDamageCaused: 10
-  MaxDamageCaused: 10
+  MinDamageCaused: 14
+  MaxDamageCaused: 14
   TypedDamages: []
   DamageDirectionMode: 1
   DamageCausedKnockbackType: 1
