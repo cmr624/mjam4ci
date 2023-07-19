@@ -25443,37 +25443,6 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!1 &5160098114815203629
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5157959164709231351}
-  m_Layer: 0
-  m_Name: LeftHand
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5157959164709231351
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5160098114815203629}
-  m_LocalRotation: {x: 0.32712236, y: -0.19806856, z: 0.92245, w: -0.053347632}
-  m_LocalPosition: {x: -0.3, y: 0.154, z: 0.52}
-  m_LocalScale: {x: 0.9999998, y: 0.9999998, z: 0.9999998}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5158114567906314013}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 19.3, y: 41.44, z: 193.98}
 --- !u!1 &5160744762347000303
 GameObject:
   m_ObjectHideFlags: 0
@@ -25497,48 +25466,15 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5160744762347000303}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.079, z: -0.195}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.35, y: 0.35, z: 0.35}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6208722243383920014}
-  - {fileID: 5157959164709231351}
-  - {fileID: 5155162340616372061}
   m_Father: {fileID: 5155361323188434409}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &5160931899455811345
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 5155162340616372061}
-  m_Layer: 0
-  m_Name: RightHand
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &5155162340616372061
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5160931899455811345}
-  m_LocalRotation: {x: -0.12147916, y: -0.001634635, z: -0.54414123, w: 0.8301509}
-  m_LocalPosition: {x: 0.1, y: -0.138, z: -0.51}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5158114567906314013}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: -11.74, y: 7.6, z: -67.27}
 --- !u!1 &5161009420414549073
 GameObject:
   m_ObjectHideFlags: 0
@@ -25549,9 +25485,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5155361323188434409}
   - component: {fileID: 5048365237303666673}
-  - component: {fileID: 5101218614793340887}
   - component: {fileID: 5047442347442119499}
-  - component: {fileID: 5047893551281458131}
   - component: {fileID: 5047839762094789009}
   m_Layer: 0
   m_Name: AssaultRifle
@@ -25568,7 +25502,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5161009420414549073}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.4573374, y: -0.38784328, z: -2.1711726}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -25609,21 +25543,20 @@ MonoBehaviour:
   AutoDestroyWhenEmpty: 0
   AutoDestroyWhenEmptyDelay: 1
   CurrentAmmoLoaded: 0
-  WeaponAttachmentOffset: {x: 0, y: 0.1, z: -0.15}
+  WeaponAttachmentOffset: {x: 0, y: 0, z: 0}
   FlipWeaponOnCharacterFlip: 1
   RightFacingFlipValue: {x: 1, y: 1, z: 1}
   LeftFacingFlipValue: {x: -1, y: 1, z: 1}
   WeaponUseTransform: {fileID: 0}
   WeaponShouldFlip: 1
-  LeftHandHandle: {fileID: 5157959164709231351}
-  RightHandHandle: {fileID: 5155162340616372061}
+  LeftHandHandle: {fileID: 0}
+  RightHandHandle: {fileID: 0}
   ModifyMovementWhileAttacking: 1
   MovementMultiplier: 0.5
   PreventAllMovementWhileInUse: 0
   PreventAllAimWhileInUse: 0
   RecoilForce: 0
-  Animators:
-  - {fileID: 5101218614793340887}
+  Animators: []
   PerformAnimatorSanityChecks: 0
   MirrorCharacterAnimatorParameters: 0
   WeaponAnimationID: 0
@@ -25657,30 +25590,10 @@ MonoBehaviour:
   Spread: {x: 0, y: 0, z: 0}
   RotateWeaponOnSpread: 0
   RandomSpread: 1
-  SpawnPosition: {x: 1.4573374, y: -0.22784328, z: -1.6011727}
+  SpawnPosition: {x: 0, y: 0.16, z: 0.57}
   ObjectPooler: {fileID: 0}
   SpawnFeedbacks: []
   TestShootButton: 0
---- !u!95 &5101218614793340887
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5161009420414549073}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: aa1043c1aa485b345bd7494b2f80cefd, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
 --- !u!114 &5047442347442119499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25719,29 +25632,6 @@ MonoBehaviour:
     m_Bits: 0
   MaximumSlopeElevation: 50
   AvoidNullAim: 1
---- !u!114 &5047893551281458131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5161009420414549073}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03aaf62627f364a7d92d307729fe738d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Mode: 1
-  PerformRaycast: 1
-  DrawLaser: 1
-  RaycastOriginOffset: {x: 0, y: 0, z: 0}
-  LaserOriginOffset: {x: 0, y: 0.16, z: 0.57}
-  LaserMaxDistance: 50
-  LaserCollisionMask:
-    serializedVersion: 2
-    m_Bits: 1057536
-  LaserWidth: {x: 0.01, y: 0.01}
-  LaserMaterial: {fileID: 2100000, guid: 41fcf89824cad6c40a3efec451bb197f, type: 2}
 --- !u!114 &5047839762094789009
 MonoBehaviour:
   m_ObjectHideFlags: 0

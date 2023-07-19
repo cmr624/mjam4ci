@@ -5089,7 +5089,7 @@ GameObject:
   - component: {fileID: 1594803062}
   - component: {fileID: 1594803061}
   - component: {fileID: 1594803060}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11236,7 +11236,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -259.9, y: 159.8}
+  m_AnchoredPosition: {x: -259.9, y: 159.79999}
   m_SizeDelta: {x: 283.43, y: 39.04}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224461078637132365
