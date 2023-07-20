@@ -1320,3 +1320,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &5332466042711914843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6592899674371941341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41dcfc979962349bea3855af4ce1c0e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fallbackClipName: SeekerWalk
+  _shouldAlwaysPlay: 1
+  _playbackProbability: 0.33
+  _shouldMuteIfFarFromListener: 0
+  _maxPlaybackDistance: 16
