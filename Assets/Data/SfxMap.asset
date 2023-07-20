@@ -17,3 +17,7 @@ MonoBehaviour:
     SFXClip: {fileID: 8300000, guid: 9eb2da2399d0949308c76925017ecfe3, type: 3}
   - Action: 2LegWalk2
     SFXClip: {fileID: 8300000, guid: cabd3977696684bc1ae6de12262654d2, type: 3}
+  - Action: QuadWalk
+    SFXClip: {fileID: 8300000, guid: ce10427f0da254f1384034b4ffa62f76, type: 3}
+  - Action: SeekerWalk
+    SFXClip: {fileID: 8300000, guid: 2e95b26351bfc403586b6ea713a9886a, type: 3}

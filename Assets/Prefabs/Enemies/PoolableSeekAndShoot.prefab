@@ -1371,7 +1371,7 @@ MonoBehaviour:
   _fallbackClipName: 2LegWalk1
   _shouldAlwaysPlay: 1
   _playbackProbability: 0.33
-  _shouldMuteIfFarFromListener: 1
+  _shouldMuteIfFarFromListener: 0
   _maxPlaybackDistance: 16
 --- !u!114 &5599877988590618609
 MonoBehaviour:
