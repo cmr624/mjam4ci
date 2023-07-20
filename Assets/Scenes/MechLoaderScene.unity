@@ -246,7 +246,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 5.549988, y: -22.86}
+  m_AnchoredPosition: {x: 5.549988, y: -22.859985}
   m_SizeDelta: {x: 191.9, y: 156.26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &284541832
@@ -560,7 +560,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_SizeDelta: {x: -118.48, y: -66.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!225 &529552825
 CanvasGroup:
@@ -692,6 +692,7 @@ GameObject:
   - component: {fileID: 765814049}
   - component: {fileID: 765814051}
   - component: {fileID: 765814050}
+  - component: {fileID: 765814052}
   m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
@@ -716,8 +717,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -7.45, y: -17.55}
-  m_SizeDelta: {x: 906.84, y: 906.84}
+  m_AnchoredPosition: {x: 7.78, y: 3.82}
+  m_SizeDelta: {x: 751.78, y: 694.93}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &765814050
 MonoBehaviour:
@@ -757,6 +758,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 765814048}
   m_CullTransparentMesh: 1
+--- !u!114 &765814052
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 765814048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f009572b4d918346b24337ef83f88c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Rotating: 1
+  RotationSpace: 0
+  UpdateMode: 0
+  RotationSpeed: {x: 0, y: 0, z: -20}
+  Orbiting: 0
+  AdditiveOrbitRotation: 0
+  OrbitCenterTransform: {fileID: 0}
+  OrbitCenterOffset: {x: 0, y: 0, z: 0}
+  OrbitRotationAxis: {x: 0, y: 1, z: 0}
+  OrbitRotationSpeed: 10
+  OrbitRadius: 3
+  OrbitCorrectionSpeed: 10
+  DrawGizmos: 1
+  OrbitPlaneColor: {r: 54, g: 169, b: 225, a: 0.02}
+  OrbitLineColor: {r: 225, g: 225, b: 225, a: 0.1}
+  _orbitCenter: {x: 0, y: 0, z: 0}
+  _worldRotationAxis: {x: 0, y: 0, z: 0}
+  _snappedPosition: {x: 0, y: 0, z: 0}
+  _radius: {x: 0, y: 0, z: 0}
 --- !u!1 &1278862507
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,14 +1014,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fc9302e06a3ad240a410b9264fd8e56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LoadingText: {fileID: 0}
-  LoadingProgressBar: {fileID: 485648907}
-  LoadingAnimation: {fileID: 0}
-  LoadingCompleteAnimation: {fileID: 0}
-  StartFadeDuration: 0.5
-  ProgressBarSpeed: 2
-  ExitFadeDuration: 0.5
-  LoadCompleteDelay: 0.5
+  StartFadeDuration: 0.25
+  ProgressBarSpeed: 5
+  ExitFadeDuration: 0.25
+  LoadCompleteDelay: 2
 --- !u!4 &1904868560
 Transform:
   m_ObjectHideFlags: 0
