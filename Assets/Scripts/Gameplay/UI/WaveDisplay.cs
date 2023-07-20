@@ -29,7 +29,7 @@ public class WaveDisplay : MonoBehaviour
 
         if(wave == null)
         {
-            m_waveProgressText.text = null;
+            m_waveProgressText.text = "Press ENTER to Start Wave";
             return;
         }
 

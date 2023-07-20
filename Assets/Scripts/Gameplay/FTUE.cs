@@ -19,7 +19,7 @@ public class FTUE : MonoBehaviour
         m_ftueCanvas.SetActive(false); // Make sure canvas is initially deactivated.
 
         int playCount = PlayerPrefs.GetInt("PlayCount", 0);
-        if (playCount < 3)
+        if (playCount < 2)
         {
             Time.timeScale = 0; // Pause the game.
             m_ftueCanvas.SetActive(true); // Enable the FTUECanvas.
