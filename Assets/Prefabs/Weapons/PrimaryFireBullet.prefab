@@ -15255,14 +15255,14 @@ MonoBehaviour:
     m_Bits: 8960
   Owner: {fileID: 0}
   TriggerFilter: 195
-  MinDamageCaused: 10
-  MaxDamageCaused: 10
+  MinDamageCaused: 50
+  MaxDamageCaused: 50
   TypedDamages: []
   DamageDirectionMode: 1
   DamageCausedKnockbackType: 1
   DamageCausedKnockbackDirection: 3
-  DamageCausedKnockbackForce: {x: 10, y: 2, z: 0}
-  InvincibilityDuration: 0.1
+  DamageCausedKnockbackForce: {x: 5, y: 0, z: 0}
+  InvincibilityDuration: 0.05
   RepeatDamageOverTime: 0
   AmountOfRepeats: 3
   DurationBetweenRepeats: 1

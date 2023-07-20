@@ -19926,8 +19926,8 @@ MonoBehaviour:
   Model: {fileID: 0}
   CurrentHealth: 100
   Invulnerable: 0
-  InitialHealth: 100
-  MaximumHealth: 100
+  InitialHealth: 10
+  MaximumHealth: 10
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
   DamageMMFeedbacks: {fileID: 4208648930079386488}
@@ -20462,7 +20462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84e52fb9b5604401db920884c90577b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AmountOfResource: 10
+  AmountOfResource: 5
 --- !u!136 &7898633270648188352
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -51094,8 +51094,8 @@ MonoBehaviour:
     m_Bits: 11264
   Owner: {fileID: 0}
   TriggerFilter: 195
-  MinDamageCaused: 10
-  MaxDamageCaused: 10
+  MinDamageCaused: 15
+  MaxDamageCaused: 15
   TypedDamages: []
   DamageDirectionMode: 1
   DamageCausedKnockbackType: 1

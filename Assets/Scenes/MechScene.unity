@@ -4541,49 +4541,73 @@ MonoBehaviour:
     Position: {x: -36, y: 2, z: 0}
   m_fallbackWaves:
     Waves:
-    - Name: Test Wave 1
+    - Name: Wave 1
       Description: 
       Enemies:
-      - ID: Seek
-        Time: 0
-        SpawnPointName: South
-        Position: {x: 10, y: 0, z: 10}
-        RepeatTime: 0.1
-        NumberToSpawn: 1
       - ID: Shoot
-        Time: 0
-        SpawnPointName: South
-        Position: {x: 10, y: 0, z: 10}
-        RepeatTime: 2
-        NumberToSpawn: 1
-      - ID: Tower
-        Time: 0
-        SpawnPointName: North
-        Position: {x: 10, y: 0, z: 10}
-        RepeatTime: 2
-        NumberToSpawn: 10
-    - Name: Test Wave 2
-      Description: 
-      Enemies:
-      - ID: Tower
         Time: 0
         SpawnPointName: South
         Position: {x: 0, y: 0, z: 0}
-        RepeatTime: 1
-        NumberToSpawn: 5
+        RepeatTime: 0.1
+        NumberToSpawn: 2
+    - Name: Wave 2
+      Description: 
+      Enemies:
       - ID: Shoot
-        Time: 5
+        Time: 0
         SpawnPointName: West
-        Position: {x: 0, y: 3, z: 0}
-        RepeatTime: 1.5
+        Position: {x: 0, y: 0, z: 0}
+        RepeatTime: 0.1
         NumberToSpawn: 3
       - ID: Seek
         Time: 12
         SpawnPointName: East
         Position: {x: 0, y: 0, z: 0}
         RepeatTime: 3.5
-        NumberToSpawn: 10
-    - Name: Test Wave 3
+        NumberToSpawn: 3
+    - Name: Wave 3
+      Description: 
+      Enemies:
+      - ID: Tower
+        Time: 0
+        SpawnPointName: North
+        Position: {x: 0, y: 0, z: 0}
+        RepeatTime: 1
+        NumberToSpawn: 5
+      - ID: Shoot
+        Time: 5
+        SpawnPointName: North
+        Position: {x: 0, y: 3, z: 0}
+        RepeatTime: 0.5
+        NumberToSpawn: 5
+    - Name: Wave 4
+      Description: 
+      Enemies:
+      - ID: Seek
+        Time: 0
+        SpawnPointName: North
+        Position: {x: 10, y: 2, z: 10}
+        RepeatTime: 1
+        NumberToSpawn: 5
+      - ID: Seek
+        Time: 10
+        SpawnPointName: East
+        Position: {x: 10, y: 2, z: 10}
+        RepeatTime: 1
+        NumberToSpawn: 5
+      - ID: Seek
+        Time: 20
+        SpawnPointName: South
+        Position: {x: 10, y: 2, z: 10}
+        RepeatTime: 1
+        NumberToSpawn: 5
+      - ID: Seek
+        Time: 30
+        SpawnPointName: West
+        Position: {x: 10, y: 2, z: 10}
+        RepeatTime: 1
+        NumberToSpawn: 5
+    - Name: Wave 5
       Description: 
       Enemies:
       - ID: Tower
@@ -4602,7 +4626,13 @@ MonoBehaviour:
         Time: 12
         SpawnPointName: 
         Position: {x: 10, y: 2, z: 10}
-        RepeatTime: 3.5
+        RepeatTime: 1
+        NumberToSpawn: 9
+      - ID: Tower
+        Time: 18
+        SpawnPointName: South
+        Position: {x: 10, y: 2, z: 10}
+        RepeatTime: 0.4
         NumberToSpawn: 9
   m_startNextWaveKey: 13
   m_endWaveKey: 284
@@ -6281,26 +6311,26 @@ MonoBehaviour:
   m_saveKey: 283
   m_fallbackParameters:
     StartingResource: 100
-    AnyTowerMinDistance: 5
+    AnyTowerMinDistance: 3
     RedTower:
       MaxHealth: 100
-      Cost: 10
-    RedGroupMaxTowers: 3
-    RifleDamageMin: 10
-    RifleDamageMax: 50
+      Cost: 75
+    RedGroupMaxTowers: 5
+    RifleDamageMin: 5
+    RifleDamageMax: 25
     GreenTower:
       MaxHealth: 100
-      Cost: 10
-    GreenTowerMinDistance: 7
+      Cost: 60
+    GreenTowerMinDistance: 15
     GreenTowerHealRadius: 5
     GreenTowerTimeBetweenHealing: 1
     GreenTowerHealAmount: 5
     BlueTower:
       MaxHealth: 50
-      Cost: 5
-    BlueGroupMaxTowers: 5
-    DashCoolDownMin: 1
-    DashCoolDownMax: 10
+      Cost: 45
+    BlueGroupMaxTowers: 3
+    DashCoolDownMin: 10
+    DashCoolDownMax: 1
     DashDistanceMin: 2
     DashDistanceMax: 10
     DashTimeMin: 1
