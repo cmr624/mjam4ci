@@ -10,6 +10,8 @@ public class WaveDisplay : MonoBehaviour
     [SerializeField]
     private WaveManager m_waveManager;
 
+    [SerializeField] private GameObject m_promptText;
+
     private void Start()
     {
         m_waveManager.CurrentWave.Subscribe(SetCurrentWaveText);
@@ -30,9 +32,10 @@ public class WaveDisplay : MonoBehaviour
         if(wave == null)
         {
             m_waveProgressText.text = "Press ENTER to Start Wave";
+            m_promptText.SetActive(true);
             return;
         }
-
+        m_promptText.SetActive(false);
         string displayString = $"Enemies to spawn: {m_waveManager.ToSpawn.Value.Count}. Enemies To Destroy: {m_waveManager.EnemiesRemaining.Value.Count}";
         m_waveProgressText.text = displayString;
     }
