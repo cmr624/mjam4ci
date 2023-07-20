@@ -133,6 +133,7 @@ namespace MoreMountains.TopDownEngine
 			{
 				return;
 			}
+
 			Cooldown.Start();
 
 			_movement.ChangeState(CharacterStates.MovementStates.Dashing);
@@ -224,6 +225,11 @@ namespace MoreMountains.TopDownEngine
 			}
 		}
 
+		public void UpdateDashBar()
+		{
+			GUIManager.Instance.UpdateDashBar(Cooldown.CurrentDurationLeft, 0f, Cooldown.ConsumptionDuration, _character.PlayerID);
+		}
+
 		/// <summary>
 		/// On process ability, we move our character if we're currently dashing
 		/// </summary>
@@ -231,6 +237,7 @@ namespace MoreMountains.TopDownEngine
 		{
 			base.ProcessAbility();
 			Cooldown.Update();
+			UpdateDashBar();
 
 			if (_dashing)
 			{
