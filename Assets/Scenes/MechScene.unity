@@ -5750,6 +5750,12 @@ MonoBehaviour:
         Position: {x: 0, y: 0, z: 0}
         RepeatTime: 0.1
         NumberToSpawn: 2
+      - ID: Seek
+        Time: 0
+        SpawnPointName: South
+        Position: {x: 0, y: 0, z: 0}
+        RepeatTime: 0.1
+        NumberToSpawn: 1
     - Name: Wave 2
       Description: 
       Enemies:
@@ -5765,6 +5771,12 @@ MonoBehaviour:
         Position: {x: 0, y: 0, z: 0}
         RepeatTime: 3.5
         NumberToSpawn: 3
+      - ID: Tower
+        Time: 4
+        SpawnPointName: North
+        Position: {x: 0, y: 0, z: 0}
+        RepeatTime: 3.5
+        NumberToSpawn: 9
     - Name: Wave 3
       Description: 
       Enemies:
@@ -5834,6 +5846,210 @@ MonoBehaviour:
         Position: {x: 10, y: 2, z: 10}
         RepeatTime: 0.4
         NumberToSpawn: 9
+      - ID: Seek
+        Time: 18
+        SpawnPointName: South
+        Position: {x: 10, y: 2, z: 10}
+        RepeatTime: 0.4
+        NumberToSpawn: 12
+    - Name: Wave 5
+      Description: 
+      Enemies:
+      - ID: Tower
+        Time: 0
+        SpawnPointName: West
+        Position: {x: 0, y: 0, z: 0}
+        RepeatTime: 1
+        NumberToSpawn: 12
+      - ID: Shoot
+        Time: 5
+        SpawnPointName: North
+        Position: {x: 0, y: 3, z: 0}
+        RepeatTime: 0.5
+        NumberToSpawn: 5
+      - ID: Seek
+        Time: 12
+        SpawnPointName: 
+        Position: {x: 10, y: 2, z: 10}
+        RepeatTime: 1
+        NumberToSpawn: 9
+      - ID: Tower
+        Time: 18
+        SpawnPointName: South
+        Position: {x: 10, y: 2, z: 10}
+        RepeatTime: 0.4
+        NumberToSpawn: 9
+      - ID: Seek
+        Time: 18
+        SpawnPointName: South
+        Position: {x: 10, y: 2, z: 10}
+        RepeatTime: 0.4
+        NumberToSpawn: 12
+    - Name: Wave 6
+      Description: 
+      Enemies:
+      - ID: Tower
+        Time: 0
+        SpawnPointName: West
+        Position: {x: 0, y: 0, z: 0}
+        RepeatTime: 1
+        NumberToSpawn: 12
+      - ID: Shoot
+        Time: 5
+        SpawnPointName: North
+        Position: {x: 0, y: 3, z: 0}
+        RepeatTime: 0.5
+        NumberToSpawn: 5
+      - ID: Seek
+        Time: 12
+        SpawnPointName: 
+        Position: {x: 10, y: 2, z: 10}
+        RepeatTime: 1
+        NumberToSpawn: 9
+      - ID: Tower
+        Time: 18
+        SpawnPointName: South
+        Position: {x: 10, y: 2, z: 10}
+        RepeatTime: 0.4
+        NumberToSpawn: 9
+      - ID: Seek
+        Time: 18
+        SpawnPointName: South
+        Position: {x: 10, y: 2, z: 10}
+        RepeatTime: 0.4
+        NumberToSpawn: 12
+    - Name: Wave 7
+      Description: 
+      Enemies:
+      - ID: Tower
+        Time: 0
+        SpawnPointName: West
+        Position: {x: 0, y: 0, z: 0}
+        RepeatTime: 1
+        NumberToSpawn: 12
+      - ID: Shoot
+        Time: 5
+        SpawnPointName: North
+        Position: {x: 0, y: 3, z: 0}
+        RepeatTime: 0.5
+        NumberToSpawn: 5
+      - ID: Seek
+        Time: 12
+        SpawnPointName: 
+        Position: {x: 10, y: 2, z: 10}
+        RepeatTime: 1
+        NumberToSpawn: 9
+      - ID: Tower
+        Time: 18
+        SpawnPointName: East
+        Position: {x: 10, y: 2, z: 10}
+        RepeatTime: 0.4
+        NumberToSpawn: 9
+      - ID: Seek
+        Time: 18
+        SpawnPointName: North
+        Position: {x: 10, y: 2, z: 10}
+        RepeatTime: 0.4
+        NumberToSpawn: 12
+    - Name: Wave 8
+      Description: 
+      Enemies:
+      - ID: Tower
+        Time: 0
+        SpawnPointName: West
+        Position: {x: 0, y: 0, z: 0}
+        RepeatTime: 1
+        NumberToSpawn: 12
+      - ID: Shoot
+        Time: 5
+        SpawnPointName: North
+        Position: {x: 0, y: 3, z: 0}
+        RepeatTime: 0.5
+        NumberToSpawn: 5
+      - ID: Seek
+        Time: 12
+        SpawnPointName: 
+        Position: {x: 10, y: 2, z: 10}
+        RepeatTime: 1
+        NumberToSpawn: 9
+      - ID: Tower
+        Time: 18
+        SpawnPointName: West
+        Position: {x: 10, y: 2, z: 10}
+        RepeatTime: 0.4
+        NumberToSpawn: 9
+      - ID: Seek
+        Time: 18
+        SpawnPointName: South
+        Position: {x: 10, y: 2, z: 10}
+        RepeatTime: 0.4
+        NumberToSpawn: 12
+    - Name: Wave 9
+      Description: 
+      Enemies:
+      - ID: Tower
+        Time: 0
+        SpawnPointName: West
+        Position: {x: 0, y: 0, z: 0}
+        RepeatTime: 1
+        NumberToSpawn: 12
+      - ID: Shoot
+        Time: 5
+        SpawnPointName: East
+        Position: {x: 0, y: 3, z: 0}
+        RepeatTime: 3
+        NumberToSpawn: 5
+      - ID: Seek
+        Time: 12
+        SpawnPointName: 
+        Position: {x: 10, y: 2, z: 10}
+        RepeatTime: 1
+        NumberToSpawn: 9
+      - ID: Tower
+        Time: 18
+        SpawnPointName: South
+        Position: {x: 10, y: 2, z: 10}
+        RepeatTime: 0.4
+        NumberToSpawn: 9
+      - ID: Seek
+        Time: 18
+        SpawnPointName: South
+        Position: {x: 10, y: 2, z: 10}
+        RepeatTime: 0.4
+        NumberToSpawn: 12
+    - Name: Wave 10
+      Description: 
+      Enemies:
+      - ID: Tower
+        Time: 0
+        SpawnPointName: West
+        Position: {x: 0, y: 0, z: 0}
+        RepeatTime: 1
+        NumberToSpawn: 12
+      - ID: Shoot
+        Time: 5
+        SpawnPointName: East
+        Position: {x: 0, y: 3, z: 0}
+        RepeatTime: 2.5
+        NumberToSpawn: 5
+      - ID: Seek
+        Time: 12
+        SpawnPointName: 
+        Position: {x: 10, y: 2, z: 10}
+        RepeatTime: 1
+        NumberToSpawn: 9
+      - ID: Tower
+        Time: 18
+        SpawnPointName: South
+        Position: {x: 10, y: 2, z: 10}
+        RepeatTime: 0.4
+        NumberToSpawn: 18
+      - ID: Seek
+        Time: 3
+        SpawnPointName: South
+        Position: {x: 10, y: 2, z: 10}
+        RepeatTime: 8
+        NumberToSpawn: 12
   m_startNextWaveKey: 13
   m_endWaveKey: 284
 --- !u!1 &816476568
@@ -8283,8 +8499,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 59.20244, y: 70.800285, z: 70.05294}
-  m_Center: {x: 0.84659576, y: 0.40014267, z: -7.2991524}
+  m_Size: {x: 59.20244, y: 70.800285, z: 111.5116}
+  m_Center: {x: 0.84659576, y: 0.40014267, z: 8.173536}
 --- !u!1 &1407647467
 GameObject:
   m_ObjectHideFlags: 0
@@ -12403,7 +12619,7 @@ Camera:
     height: 1
   near clip plane: 0.1
   far clip plane: 5000
-  field of view: 40
+  field of view: 42.83
   orthographic: 0
   orthographic size: 10
   m_Depth: 1
@@ -12903,7 +13119,7 @@ MonoBehaviour:
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 0}
   m_Lens:
-    FieldOfView: 40
+    FieldOfView: 42.83
     OrthographicSize: 10
     NearClipPlane: 0.1
     FarClipPlane: 5000
@@ -13389,10 +13605,10 @@ MonoBehaviour:
   m_ZDamping: 2
   m_TargetMovementOnly: 1
   m_ScreenX: 0.5
-  m_ScreenY: 0.5
+  m_ScreenY: 0.393
   m_CameraDistance: 29.19
-  m_DeadZoneWidth: 0.108
-  m_DeadZoneHeight: 0.21
+  m_DeadZoneWidth: 0.227
+  m_DeadZoneHeight: 0.121
   m_DeadZoneDepth: 0
   m_UnlimitedSoftZone: 0
   m_SoftZoneWidth: 0.8

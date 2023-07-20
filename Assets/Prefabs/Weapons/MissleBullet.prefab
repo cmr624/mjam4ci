@@ -34927,7 +34927,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetLayerMask:
     serializedVersion: 2
-    m_Bits: 8960
+    m_Bits: 8192
   Owner: {fileID: 0}
   TriggerFilter: 195
   MinDamageCaused: 25
