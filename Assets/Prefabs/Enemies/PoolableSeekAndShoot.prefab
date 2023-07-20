@@ -225,7 +225,6 @@ GameObject:
   - component: {fileID: 222721230098862298}
   - component: {fileID: 222897721020949738}
   - component: {fileID: 222679433271554954}
-  - component: {fileID: 222295982864494926}
   - component: {fileID: 222172312161771792}
   - component: {fileID: 222687527100037506}
   - component: {fileID: 181601789442075158}
@@ -317,7 +316,7 @@ MonoBehaviour:
   InputAuthorized: 1
   AnalogInput: 0
   ScriptDrivenInput: 0
-  WalkSpeed: 6
+  WalkSpeed: 4
   ShouldSetMovement: 1
   IdleThreshold: 0.05
   Acceleration: 10
@@ -366,8 +365,8 @@ MonoBehaviour:
   Model: {fileID: 0}
   CurrentHealth: 100
   Invulnerable: 0
-  InitialHealth: 100
-  MaximumHealth: 100
+  InitialHealth: 25
+  MaximumHealth: 25
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
   DamageMMFeedbacks: {fileID: 3073909049612043267}
@@ -396,54 +395,6 @@ MonoBehaviour:
   TargetDamageResistanceProcessor: {fileID: 0}
   TargetAnimator: {fileID: 0}
   DisableAnimatorLogs: 1
---- !u!114 &222295982864494926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 181601789442075162}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76891b3b532f84acaaeed44c357bd00c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TargetLayerMask:
-    serializedVersion: 2
-    m_Bits: 3200
-  Owner: {fileID: 0}
-  TriggerFilter: 195
-  MinDamageCaused: 2
-  MaxDamageCaused: 2
-  TypedDamages: []
-  DamageDirectionMode: 1
-  DamageCausedKnockbackType: 0
-  DamageCausedKnockbackDirection: 0
-  DamageCausedKnockbackForce: {x: 500, y: 500, z: 0}
-  InvincibilityDuration: 1
-  RepeatDamageOverTime: 1
-  AmountOfRepeats: 100
-  DurationBetweenRepeats: 1
-  DamageOverTimeInterruptible: 1
-  RepeatedDamageType: {fileID: 0}
-  DamageTakenEveryTime: 0
-  DamageTakenDamageable: 0
-  DamageTakenNonDamageable: 0
-  DamageTakenKnockbackType: 0
-  DamageTakenKnockbackForce: {x: 0, y: 0, z: 0}
-  DamageTakenInvincibilityDuration: 0.5
-  HitDamageableFeedback: {fileID: 0}
-  HitNonDamageableFeedback: {fileID: 0}
-  HitAnythingFeedback: {fileID: 0}
-  HitDamageableEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  HitNonDamageableEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  HitAnythingEvent:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &222172312161771792
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -790,7 +741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84e52fb9b5604401db920884c90577b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AmountOfResource: 1
+  AmountOfResource: 5
 --- !u!114 &1098432612555854190
 MonoBehaviour:
   m_ObjectHideFlags: 0

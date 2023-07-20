@@ -5043,13 +5043,13 @@ MonoBehaviour:
     m_Bits: 3840
   Owner: {fileID: 0}
   TriggerFilter: 195
-  MinDamageCaused: 10
-  MaxDamageCaused: 10
+  MinDamageCaused: 5
+  MaxDamageCaused: 5
   TypedDamages: []
   DamageDirectionMode: 1
   DamageCausedKnockbackType: 1
   DamageCausedKnockbackDirection: 3
-  DamageCausedKnockbackForce: {x: 10, y: 2, z: 0}
+  DamageCausedKnockbackForce: {x: 10, y: 0, z: 0}
   InvincibilityDuration: 0.1
   RepeatDamageOverTime: 0
   AmountOfRepeats: 3

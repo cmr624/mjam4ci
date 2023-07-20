@@ -33,7 +33,7 @@ public class TimedText : MonoBehaviour
             StopCoroutine(m_coroutine);
         }
 
-        if (enabled)
+        if (gameObject.active)
         {
             m_text.text = text;
 
