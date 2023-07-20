@@ -203,7 +203,7 @@ MonoBehaviour:
     Quantized: 0
     TargetBPM: 120
   DebugActive: 0
-  Sfx: {fileID: 8300000, guid: a4ce1e0e50d887641b42f7507d3951bb, type: 3}
+  Sfx: {fileID: 8300000, guid: 1978b4f7412c741efb0c5ccf1e2ee11e, type: 3}
   RandomSfx: []
   TestButton: 0
   TestStopButton: 0
@@ -258,7 +258,7 @@ Transform:
   m_GameObject: {fileID: 3528675239006371990}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6613989677328439643}
@@ -341,8 +341,8 @@ MonoBehaviour:
   Model: {fileID: 0}
   CurrentHealth: 100
   Invulnerable: 0
-  InitialHealth: 10
-  MaximumHealth: 10
+  InitialHealth: 30
+  MaximumHealth: 30
   ResetHealthOnEnable: 1
   ImmuneToDamage: 0
   DamageMMFeedbacks: {fileID: 1789553357946891919}
@@ -352,7 +352,7 @@ MonoBehaviour:
   ImmuneToKnockbackIfZeroDamage: 0
   KnockbackForceMultiplier: 1
   DestroyOnDeath: 1
-  DelayBeforeDestruction: 1
+  DelayBeforeDestruction: 0.2
   PointsWhenDestroyed: 0
   RespawnAtInitialLocation: 0
   DisableControllerOnDeath: 1
@@ -907,7 +907,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84e52fb9b5604401db920884c90577b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AmountOfResource: 5
+  AmountOfResource: 25
 --- !u!65 &5263083707998650574
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1320,3 +1320,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &5332466042711914843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6592899674371941341}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41dcfc979962349bea3855af4ce1c0e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fallbackClipName: SeekerWalk
+  _shouldAlwaysPlay: 1
+  _playbackProbability: 0.33
+  _shouldMuteIfFarFromListener: 0
+  _maxPlaybackDistance: 16

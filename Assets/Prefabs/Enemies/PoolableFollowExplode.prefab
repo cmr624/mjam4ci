@@ -203,7 +203,7 @@ MonoBehaviour:
     Quantized: 0
     TargetBPM: 120
   DebugActive: 0
-  Sfx: {fileID: 8300000, guid: a4ce1e0e50d887641b42f7507d3951bb, type: 3}
+  Sfx: {fileID: 8300000, guid: 38ed22162faa04c1e98b712f1e308191, type: 3}
   RandomSfx: []
   TestButton: 0
   TestStopButton: 0
@@ -19864,7 +19864,7 @@ Transform:
   m_GameObject: {fileID: 1316605544111048033}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3755357328824505522}
@@ -20462,7 +20462,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 84e52fb9b5604401db920884c90577b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AmountOfResource: 5
+  AmountOfResource: 30
 --- !u!136 &7898633270648188352
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -51254,6 +51254,23 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &3391250077054201311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7424558320358238868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41dcfc979962349bea3855af4ce1c0e6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fallbackClipName: QuadWalk
+  _shouldAlwaysPlay: 1
+  _playbackProbability: 0.33
+  _shouldMuteIfFarFromListener: 0
+  _maxPlaybackDistance: 16
 --- !u!4 &7800943567969447982 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2d47aacbab2858f489e6ca0fee4f3c51,

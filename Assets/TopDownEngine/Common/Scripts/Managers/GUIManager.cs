@@ -69,13 +69,13 @@ namespace MoreMountains.TopDownEngine
 		public MMProgressBar MissilesBar;
 		public MMProgressBar MeleeBar;
 
-		public void UpdateDashBar(float currentFuel, float minFuel, float maxFuel, string playerID)
+		public void UpdateDashBar(float currentFuel, float min, float max, string playerID)
 		{
 			if (DashBar == null)
 			{
 				return;
 			}
-			DashBar.UpdateBar(currentFuel, minFuel, maxFuel);
+			//DashBar.UpdateBar(currentFuel, min, max);
 		}
 
 		public void UpdateMissilesBar(float currentCooldownTimeLeft, float minTime, float maxTime)
