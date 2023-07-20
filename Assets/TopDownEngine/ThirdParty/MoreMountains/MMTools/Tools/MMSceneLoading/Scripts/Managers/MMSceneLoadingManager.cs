@@ -44,13 +44,9 @@ namespace MoreMountains.Tools
 
 		[Header("GameObjects")]
 		/// the text object where you want the loading message to be displayed
-		public Text LoadingText;
 		/// the canvas group containing the progress bar
-		public CanvasGroup LoadingProgressBar;
 		/// the canvas group containing the animation
-		public CanvasGroup LoadingAnimation;
 		/// the canvas group containing the animation to play when loading is complete
-		public CanvasGroup LoadingCompleteAnimation;
 
 		[Header("Time")]
 		/// the duration (in seconds) of the initial fade in
@@ -67,7 +63,6 @@ namespace MoreMountains.Tools
 		protected float _fadeDuration = 0.5f;
 		protected float _fillTarget=0f;
 		protected string _loadingTextValue;
-		protected Image _progressBarImage;
 
 		protected static MMTweenType _tween;
 
@@ -82,7 +77,7 @@ namespace MoreMountains.Tools
 			if (LoadingScreenSceneName!=null)
 			{
 				LoadingSceneEvent.Trigger(sceneToLoad, LoadingStatus.LoadStarted);
-				SceneManager.LoadScene(LoadingScreenSceneName);
+				//SceneManager.LoadScene(LoadingScreenSceneName);
 			}
 		}
 
@@ -103,9 +98,8 @@ namespace MoreMountains.Tools
 		protected virtual void Start()
 		{
 			_tween = new MMTweenType(MMTween.MMTweenCurve.EaseOutCubic);
-			_progressBarImage = LoadingProgressBar.GetComponent<Image>();
+			//_progressBarImage = LoadingProgressBar.GetComponent<Image>();
             
-			_loadingTextValue =LoadingText.text;
 			if (!string.IsNullOrEmpty(_sceneToLoad))
 			{
 				StartCoroutine(LoadAsynchronously());
@@ -118,7 +112,7 @@ namespace MoreMountains.Tools
 		protected virtual void Update()
 		{
 			Time.timeScale = 1f;
-			_progressBarImage.fillAmount = MMMaths.Approach(_progressBarImage.fillAmount,_fillTarget,Time.deltaTime*ProgressBarSpeed);
+			//_progressBarImage.fillAmount = MMMaths.Approach(_progressBarImage.fillAmount,_fillTarget,Time.deltaTime*ProgressBarSpeed);
 		}
 
 		/// <summary>
@@ -146,13 +140,7 @@ namespace MoreMountains.Tools
 			// when the load is close to the end (it'll never reach it), we set it to 100%
 			_fillTarget = 1f;
 
-			// we wait for the bar to be visually filled to continue
-			while (_progressBarImage.fillAmount != _fillTarget)
-			{
-				yield return null;
-			}
-
-			// the load is now complete, we replace the bar with the complete animation
+				// the load is now complete, we replace the bar with the complete animation
 			LoadingComplete();
 			yield return new WaitForSeconds(LoadCompleteDelay);
 
@@ -170,9 +158,6 @@ namespace MoreMountains.Tools
 		/// </summary>
 		protected virtual void LoadingSetup() 
 		{
-			LoadingCompleteAnimation.alpha=0;
-			_progressBarImage.fillAmount = 0f;
-			LoadingText.text = _loadingTextValue;
 		}
 
 		/// <summary>
@@ -181,10 +166,6 @@ namespace MoreMountains.Tools
 		protected virtual void LoadingComplete() 
 		{
 			LoadingSceneEvent.Trigger(_sceneToLoad, LoadingStatus.InterpolatedLoadProgressComplete);
-			LoadingCompleteAnimation.gameObject.SetActive(true);
-			StartCoroutine(MMFade.FadeCanvasGroup(LoadingProgressBar,0.1f,0f));
-			StartCoroutine(MMFade.FadeCanvasGroup(LoadingAnimation,0.1f,0f));
-			StartCoroutine(MMFade.FadeCanvasGroup(LoadingCompleteAnimation,0.1f,1f));
 		}
 	}
 }
