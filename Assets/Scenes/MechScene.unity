@@ -6499,8 +6499,8 @@ MonoBehaviour:
       MaxHealth: 50
       Cost: 45
     BlueGroupMaxTowers: 3
-    DashCoolDownMin: 10
-    DashCoolDownMax: 1
+    DashCoolDownMin: 1
+    DashCoolDownMax: 5
     DashDistanceMin: 2
     DashDistanceMax: 10
     DashTimeMin: 1
@@ -10078,7 +10078,6 @@ GameObject:
   - component: {fileID: 20646996888046739}
   - component: {fileID: 124846488999806629}
   - component: {fileID: 114905644837506185}
-  - component: {fileID: 2184356531377151238}
   - component: {fileID: 2184356531377151237}
   m_Layer: 0
   m_Name: UICamera
@@ -12951,7 +12950,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1737470787176471}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b45c07d1fd86b2c488aeed1a9e84e924, type: 3}
   m_Name: 
@@ -12972,6 +12971,9 @@ MonoBehaviour:
   Joystick: {fileID: 225721413784233333}
   PointsText: {fileID: 0}
   PointsTextPattern: 000000
+  DashBar: {fileID: 91771566}
+  MissilesBar: {fileID: 1515930576}
+  MeleeBar: {fileID: 2061481904}
 --- !u!114 &114913794619602715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15768,34 +15770,6 @@ MonoBehaviour:
   Threshold: {x: 0.1, y: 0.4}
   RotateInputBasedOnCameraDirection: 0
   MaximumNumberOfWeapons: 3
---- !u!114 &2184356531377151238
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1737470787176471}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9b3484b7d9477454a98949da450463da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  MainCanvas: {fileID: 223698243153083637}
-  HUD: {fileID: 1663800523820937}
-  HealthBars:
-  - {fileID: 114677894824837219}
-  DashBars: []
-  AmmoDisplays: []
-  PauseScreen: {fileID: 1253938074506939}
-  DeathScreen: {fileID: 1041694924381245}
-  Buttons: {fileID: 225035570449613539}
-  Arrows: {fileID: 225004372504476855}
-  Joystick: {fileID: 225721413784233333}
-  PointsText: {fileID: 0}
-  PointsTextPattern: 000000
-  DashBar: {fileID: 91771566}
-  MissilesBar: {fileID: 1515930576}
-  MeleeBar: {fileID: 2061481904}
 --- !u!114 &2206524379677504543
 MonoBehaviour:
   m_ObjectHideFlags: 0
