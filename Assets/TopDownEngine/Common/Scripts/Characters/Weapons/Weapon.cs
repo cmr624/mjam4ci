@@ -529,6 +529,7 @@ namespace MoreMountains.TopDownEngine
 		public virtual void CaseWeaponDelayBeforeUse()
 		{
 			_delayBeforeUseCounter -= Time.deltaTime;
+			GUIManager.Instance.UpdateMissilesBar(_delayBeforeUseCounter, TimeBetweenUses, 0f);
 			if (_delayBeforeUseCounter <= 0)
 			{
 				StartCoroutine(ShootRequestCo());
@@ -666,7 +667,9 @@ namespace MoreMountains.TopDownEngine
 				ShootRequest();
 				_lastShootRequestAt = Time.time;
 				remainingShots--;
+				
 				yield return MMCoroutine.WaitFor(interval);
+				
 			}
 		}
 

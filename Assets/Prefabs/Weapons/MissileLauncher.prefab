@@ -5000,16 +5000,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d7ce0b8cf4b34859b9e359283b2e7f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WeaponName: 
+  WeaponName: ML
   WeaponCurrentlyActive: 1
   InputAuthorized: 1
   TriggerMode: 0
   DelayBeforeUse: 0
-  DelayBeforeUseReleaseInterruption: 1
+  DelayBeforeUseReleaseInterruption: 0
   TimeBetweenUses: 3
-  TimeBetweenUsesReleaseInterruption: 1
+  TimeBetweenUsesReleaseInterruption: 0
   UseBurstMode: 1
-  BurstLength: 3
+  BurstLength: 4
   BurstTimeBetweenShots: 0.25
   MagazineBased: 0
   MagazineSize: 30
