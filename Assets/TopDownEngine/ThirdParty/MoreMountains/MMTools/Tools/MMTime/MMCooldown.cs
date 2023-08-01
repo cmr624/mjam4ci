@@ -30,7 +30,7 @@ namespace MoreMountains.Tools
 		public CooldownStates CooldownState = CooldownStates.Idle;
 		[MMReadOnly]
 		/// the amount of duration left in the object at any given time
-		public float CurrentDurationLeft;
+		public float CurrentDurationLeft = 1f;
 		
 		/// <summary>
 		/// A public delegate you can listen to for state changes

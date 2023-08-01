@@ -51091,7 +51091,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetLayerMask:
     serializedVersion: 2
-    m_Bits: 11264
+    m_Bits: 3072
   Owner: {fileID: 0}
   TriggerFilter: 195
   MinDamageCaused: 15
@@ -51136,8 +51136,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 10
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 2
+  m_Center: {x: 0, y: 0.76, z: 0}
 --- !u!1001 &7766525338277025733
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -49,7 +49,9 @@ namespace MoreMountains.TopDownEngine
 		[Tooltip("the pattern to apply to format the display of points")]
 		public string PointsTextPattern = "000000";
 
-
+		// dash progress bar
+		
+	
 		protected float _initialJoystickAlpha;
 		protected float _initialButtonsAlpha;
 		protected bool _initialized = false;
@@ -75,7 +77,7 @@ namespace MoreMountains.TopDownEngine
 			{
 				return;
 			}
-			//DashBar.UpdateBar(currentFuel, min, max);
+			DashBar.UpdateBar(currentFuel, min, max);
 		}
 
 		public void UpdateMissilesBar(float currentCooldownTimeLeft, float minTime, float maxTime)
@@ -334,7 +336,7 @@ namespace MoreMountains.TopDownEngine
 				}    
 			}
 		}
-
+		
 		/// <summary>
 		/// Updates the (optional) ammo displays.
 		/// </summary>

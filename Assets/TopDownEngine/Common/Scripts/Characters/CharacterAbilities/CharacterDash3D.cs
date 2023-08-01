@@ -152,6 +152,7 @@ namespace MoreMountains.TopDownEngine
 			}
 
 			HandleDashMode();
+			UpdateDashBarInUI();
 		}
 
 		protected virtual void HandleDashMode()
@@ -227,7 +228,7 @@ namespace MoreMountains.TopDownEngine
 
 		public void UpdateDashBarInUI()
 		{
-			GUIManager.Instance.UpdateDashBar(Cooldown.CurrentDurationLeft, 0f, Cooldown.ConsumptionDuration, _character.PlayerID);
+			GUIManager.Instance.UpdateDashBar(Cooldown.Progress, 0f, 1f, _character.PlayerID);
 		}
 
 		/// <summary>
@@ -237,6 +238,7 @@ namespace MoreMountains.TopDownEngine
 		{
 			base.ProcessAbility();
 			Cooldown.Update();
+			UpdateDashBarInUI();
 
 			if (_dashing)
 			{
@@ -256,7 +258,6 @@ namespace MoreMountains.TopDownEngine
 						_dashTimer += Time.deltaTime;
 						_controller.MovePosition(this.transform.position + _newPosition - _oldPosition);
 					}
-					UpdateDashBarInUI();
 				}
 				else
 				{
