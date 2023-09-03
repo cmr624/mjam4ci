@@ -612,7 +612,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   FollowTargetMode: 2
   NestDrawnHealthBar: 0
-  Billboard: 0
+  Billboard: 1
   InstantiatedOnDeath: {fileID: 0}
   HealthBarOffset: {x: 0, y: 5, z: 0}
   AlwaysVisible: 1
