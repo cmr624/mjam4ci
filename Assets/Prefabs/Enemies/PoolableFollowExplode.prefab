@@ -20307,7 +20307,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   FollowTargetMode: 2
   NestDrawnHealthBar: 0
-  Billboard: 0
+  Billboard: 1
   InstantiatedOnDeath: {fileID: 0}
   HealthBarOffset: {x: 0, y: 2.5, z: 0}
   AlwaysVisible: 0
@@ -51269,8 +51269,8 @@ MonoBehaviour:
   _fallbackClipName: QuadWalk
   _shouldAlwaysPlay: 1
   _playbackProbability: 0.33
-  _shouldMuteIfFarFromListener: 0
-  _maxPlaybackDistance: 16
+  _shouldMuteIfFarFromListener: 1
+  _maxPlaybackDistance: 5
 --- !u!4 &7800943567969447982 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2d47aacbab2858f489e6ca0fee4f3c51,
